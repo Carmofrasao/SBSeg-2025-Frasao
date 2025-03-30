@@ -1,0 +1,11 @@
+reputation-categories-file: /etc/suricata/iprep/categories.txt 
+default-reputation-path: /etc/suricata/iprep
+reputation-files:
+  - /etc/suricata/iprep/reputation.list
+
+outputs:
+  - eve-log:
+      enabled: yes
+      filetype: json
+      filename: /etc/suricata/eve.json
+

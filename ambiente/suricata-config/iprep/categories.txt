@@ -1,0 +1,5 @@
+1,BadHosts,Hosts conhecidos como maliciosos
+2,GoodHosts,Hosts conhecidos como bons
+3,BruteForce,IPs envolvidos em ataques de força bruta
+4,PortScan,IPs realizando varreduras de portas
+5,Malware,IPs associados a distribuição de malware

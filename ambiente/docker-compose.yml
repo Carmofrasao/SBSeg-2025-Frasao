@@ -1,0 +1,42 @@
+version: '3'
+services:
+  web-server:
+    image: nginx:latest
+    networks:
+      my_net:
+        ipv4_address: 172.20.0.2
+    ports:
+      - "80:80"
+
+  suricata:
+    image: jasonish/suricata:latest
+    volumes:
+      - ./suricata-config:/etc/suricata
+    network_mode: "service:web-server"
+    cap_add:
+      - NET_ADMIN
+
+  legit-client:
+    image: alpine
+    networks:
+      my_net:
+        ipv4_address: 172.20.0.3
+    tty: true
+    command: tail -f /dev/null
+
+  attacker:
+    image: alpine
+    networks:
+      my_net:
+        ipv4_address: 172.20.0.4
+    tty: true
+    command: tail -f /dev/null
+    cap_add:
+      - NET_ADMIN
+
+networks:
+  my_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/24

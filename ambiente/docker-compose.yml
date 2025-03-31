@@ -2,6 +2,7 @@ version: '3'
 services:
   web-server:
     image: nginx:latest
+    container_name: server
     networks:
       my_net:
         ipv4_address: 172.20.0.2
@@ -10,6 +11,7 @@ services:
 
   suricata:
     image: jasonish/suricata:latest
+    container_name: suricata
     volumes:
       - ./suricata-config:/etc/suricata
     command: ["suricata", "-c", "/etc/suricata/suricata.yaml", "-i", "docker0", "-v"]
@@ -23,6 +25,7 @@ services:
 
   legit-client:
     image: alpine
+    container_name: client
     networks:
       my_net:
         ipv4_address: 172.20.0.3
@@ -31,6 +34,7 @@ services:
 
   attacker:
     image: debian:stable-slim 
+    container_name: attacker
     networks:
       my_net:
         ipv4_address: 172.20.0.4

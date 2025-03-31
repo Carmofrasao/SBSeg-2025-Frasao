@@ -12,9 +12,14 @@ services:
     image: jasonish/suricata:latest
     volumes:
       - ./suricata-config:/etc/suricata
-    network_mode: "service:web-server"
+    command: ["suricata", "-c", "/etc/suricata/suricata.yaml", "-i", "docker0", "-v"]
+    network_mode: "host"
     cap_add:
       - NET_ADMIN
+      - NET_RAW
+      - SYS_NICE
+    depends_on:
+      - web-server
 
   legit-client:
     image: alpine
@@ -25,7 +30,7 @@ services:
     command: tail -f /dev/null
 
   attacker:
-    image: alpine
+    image: debian:stable-slim 
     networks:
       my_net:
         ipv4_address: 172.20.0.4
@@ -40,3 +45,4 @@ networks:
     ipam:
       config:
         - subnet: 172.20.0.0/24
+          gateway: 172.20.0.1

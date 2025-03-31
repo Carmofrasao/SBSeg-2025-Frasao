@@ -14,7 +14,7 @@ services:
     container_name: suricata
     volumes:
       - ./suricata-config:/etc/suricata
-    command: ["suricata", "-c", "/etc/suricata/suricata.yaml", "-i", "docker0", "-v"]
+    command: ["suricata", "-c", "/etc/suricata/suricata.yaml", "-i", "br-a62438f13432", "-v"]
     network_mode: "host"
     cap_add:
       - NET_ADMIN

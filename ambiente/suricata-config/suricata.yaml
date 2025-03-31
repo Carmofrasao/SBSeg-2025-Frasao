@@ -2,7 +2,7 @@
 ---
 
 af-packet:
-  - interface: docker0 
+  - interface: eth0@if141 
     threads: auto
     cluster-id: 99
 

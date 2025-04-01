@@ -8,9 +8,16 @@ af-packet:
 
 reputation-categories-file: /etc/suricata/iprep/categories.txt 
 default-reputation-path: /etc/suricata/iprep
+
 default-rule-path: /etc/suricata/rules
+rule-files:
+ - suricata.rules
+
 reputation-files:
   - /etc/suricata/iprep/reputation.list
+
+unix-command:
+  enabled: yes
 
 outputs:
   - eve-log:

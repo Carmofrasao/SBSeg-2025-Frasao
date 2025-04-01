@@ -54,6 +54,7 @@ def categorize_alert(alert_msg):
 
 def reload_suricata():
     subprocess.run(['kill', '-USR2', str(os.getpid())])
+    # suricatasc -c "reload-rules"
 
 wm = pyinotify.WatchManager()
 handler = EventHandler()

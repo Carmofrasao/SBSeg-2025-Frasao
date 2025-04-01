@@ -2,7 +2,7 @@
 ---
 
 af-packet:
-  - interface: eth0@if141 
+  - interface: br-320adb667144 
     threads: auto
     cluster-id: 99
 

@@ -14,7 +14,7 @@ services:
     container_name: suricata
     volumes:
       - ./suricata-config:/etc/suricata
-    command: ["suricata", "-c", "/etc/suricata/suricata.yaml", "-i", "br-a62438f13432", "-v"]
+    command: ["suricata", "-c", "/etc/suricata/suricata.yaml", "-i", "br-320adb667144", "-v"]
     network_mode: "host"
     cap_add:
       - NET_ADMIN
@@ -24,7 +24,7 @@ services:
       - web-server
 
   legit-client:
-    image: alpine
+    image: harbor.c3sl.ufpr.br/sbseg/base:latest 
     container_name: client
     networks:
       my_net:
@@ -33,13 +33,12 @@ services:
     command: tail -f /dev/null
 
   attacker:
-    image: debian:stable-slim 
+    image: harbor.c3sl.ufpr.br/sbseg/base:latest 
     container_name: attacker
     networks:
       my_net:
         ipv4_address: 172.20.0.4
     tty: true
-    command: tail -f /dev/null
     cap_add:
       - NET_ADMIN
 

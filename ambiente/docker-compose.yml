@@ -14,8 +14,8 @@ services:
     container_name: suricata
     volumes:
       - ./suricata-config:/etc/suricata
-    #command: ["suricata", "-c", "/etc/suricata/suricata.yaml", "-i", "br-320adb667144", "-v", "-s", "/etc/suricata/rules/suricata.rules"]
     command: ["suricata", "-c", "/etc/suricata/suricata.yaml", "-i", "br-320adb667144", "-v"]
+    #command: ["suricata", "-c", "/etc/suricata/suricata.yaml", "-v", "-q", "0"]
     network_mode: "host"
     cap_add:
       - NET_ADMIN

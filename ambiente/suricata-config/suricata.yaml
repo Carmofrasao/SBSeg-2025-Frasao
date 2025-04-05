@@ -30,3 +30,16 @@ outputs:
         - dns
         - tls
 
+  - drop:
+      enabled: yes
+      filename: /etc/suricata/drop.log
+      append: yes
+
+nfq:
+  enabled: yes
+  mode: accept
+  repeat-mark: 1
+  repeat-mask: 1
+  fail-open: yes
+
+runmode: workers

@@ -17,7 +17,10 @@ services:
       - ./suricata-config:/etc/suricata
       - ./suricata-logs:/var/log/suricata
     command: ["/etc/suricata/entrypoint.sh"]
-    network_mode: bridge 
+    #network_mode: bridge 
+    networks:
+      my_net:
+        ipv4_address: 172.20.0.5
     cap_add:
       - NET_ADMIN
       - NET_RAW

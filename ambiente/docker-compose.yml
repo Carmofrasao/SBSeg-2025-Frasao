@@ -16,13 +16,8 @@ services:
     volumes:
       - ./suricata-config:/etc/suricata
       - ./suricata-logs:/var/log/suricata
-    #command: ["iptables", "-I", "INPUT", "-p", "tcp", "-j", "NFQUEUE"]
-    #command: ["iptables", "-I", "OUTPUT", "-p", "tcp", "-j", "NFQUEUE"]
-    # command: ["suricata", "-c", "/etc/suricata/suricata.yaml", "-q", "0", "-i", "br-37bb6c7158e8"]
-    #command: ["suricata", "-c", "/etc/suricata/suricata.yaml", "-i", "eth0", "--af-packet"]
-    #command: ["suricata", "-c", "/etc/suricata/suricata.yaml", "-q", "0"]
     command: ["/etc/suricata/entrypoint.sh"]
-    network_mode: host
+    network_mode: bridge 
     cap_add:
       - NET_ADMIN
       - NET_RAW

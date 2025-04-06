@@ -30,7 +30,7 @@ class EventHandler(pyinotify.ProcessEvent):
 def update_reputation(ip, alert_msg):
     if not os.path.exists(reputation_file):
         with open(reputation_file, 'w') as f:
-            f.write(f"{ip},2,90\n")
+            f.write(f"{ip},3,90\n")
     else:
         with open(reputation_file, 'r+') as f:
             lines = f.readlines()

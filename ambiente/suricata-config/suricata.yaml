@@ -2,12 +2,11 @@
 ---
 
 nfq:
-  #enabled: yes
-  mode: repeat
+  enabled: yes
+  mode: accept 
   repeat-mark: 1
   repeat-mask: 1
   queue-num: 0
-  #fail-open: yes
 
 reputation-categories-file: /etc/suricata/iprep/categories.txt 
 default-reputation-path: /etc/suricata/iprep

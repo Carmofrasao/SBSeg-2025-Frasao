@@ -1,17 +1,18 @@
 %YAML 1.1
 ---
 
-af-packet:
-  - interface: br-320adb667144 
-    threads: auto
-    cluster-id: 99
+nfq:
+  enabled: yes
+  mode: accept
+  queue-num: 0
+  fail-open: yes
 
 reputation-categories-file: /etc/suricata/iprep/categories.txt 
 default-reputation-path: /etc/suricata/iprep
 
 default-rule-path: /etc/suricata/rules
 rule-files:
- - suricata.rules
+  - suricata.rules
 
 reputation-files:
   - /etc/suricata/iprep/reputation.list
@@ -20,6 +21,9 @@ unix-command:
   enabled: yes
 
 outputs:
+  - fast:
+      enabled: yes
+      filename: /var/log/suricata/fast.log
   - eve-log:
       enabled: yes
       filetype: regular 
@@ -29,17 +33,8 @@ outputs:
         - http
         - dns
         - tls
-
-  - drop:
+  - alert-debug:
       enabled: yes
-      filename: /etc/suricata/drop.log
-      append: yes
-
-nfq:
-  enabled: yes
-  mode: accept
-  repeat-mark: 1
-  repeat-mask: 1
-  fail-open: yes
+      filename: /var/log/suricata/alert-debug.log
 
 runmode: workers

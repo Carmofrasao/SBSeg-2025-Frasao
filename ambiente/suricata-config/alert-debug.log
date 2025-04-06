@@ -1,0 +1,137 @@
++================
+TIME:              04/05/2025-23:38:17.852545
+PKT SRC:           wire/pcap
+SRC IP:            fe80:0000:0000:0000:582e:9aff:feee:bc21
+DST IP:            ff02:0000:0000:0000:0000:0000:0000:0016
+PROTO:             58
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/05/2025-23:38:17.852545
+FLOW PKTS TODST:   1
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  90
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: TRUE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        90
+PACKET:
+ 0000  33 33 00 00 00 16 5A 2E  9A EE BC 21 86 DD 60 00   33....Z. ...!..`.
+ 0010  00 00 00 24 00 01 FE 80  00 00 00 00 00 00 58 2E   ...$.... ......X.
+ 0020  9A FF FE EE BC 21 FF 02  00 00 00 00 00 00 00 00   .....!.. ........
+ 0030  00 00 00 00 00 16 3A 00  05 02 00 00 01 00 8F 00   ......:. ........
+ 0040  05 BB 00 00 00 01 04 00  00 00 FF 02 00 00 00 00   ........ ........
+ 0050  00 00 00 00 00 01 FF EE  BC 21                     ........ .!
+ALERT CNT:           1
+ALERT MSG [00]:      Puta
+ALERT GID [00]:      1
+ALERT SID [00]:      1
+ALERT REV [00]:      1
+ALERT CLASS [00]:    <none>
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A
+PAYLOAD LEN:         16
+PAYLOAD:
+ 0000  00 00 00 01 04 00 00 00  FF 02 00 00 00 00 00 00   ........ ........
++================
+TIME:              04/05/2025-23:38:20.952527
+PKT SRC:           wire/pcap
+SRC IP:            fe80:0000:0000:0000:582e:9aff:feee:bc21
+DST IP:            ff02:0000:0000:0000:0000:0000:0000:0002
+PROTO:             58
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/05/2025-23:38:20.952527
+FLOW PKTS TODST:   1
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  70
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: TRUE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        70
+PACKET:
+ 0000  33 33 00 00 00 02 5A 2E  9A EE BC 21 86 DD 60 00   33....Z. ...!..`.
+ 0010  00 00 00 10 3A FF FE 80  00 00 00 00 00 00 58 2E   ....:... ......X.
+ 0020  9A FF FE EE BC 21 FF 02  00 00 00 00 00 00 00 00   .....!.. ........
+ 0030  00 00 00 00 00 02 85 00  1C B1 00 00 00 00 01 01   ........ ........
+ 0040  5A 2E 9A EE BC 21                                  Z....!
+ALERT CNT:           1
+ALERT MSG [00]:      Puta
+ALERT GID [00]:      1
+ALERT SID [00]:      1
+ALERT REV [00]:      1
+ALERT CLASS [00]:    <none>
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A
+PAYLOAD LEN:         4
+PAYLOAD:
+ 0000  00 00 00 00                                        ....
++================
+TIME:              04/05/2025-23:40:21.532516
+PKT SRC:           wire/pcap
+SRC IP:            fe80:0000:0000:0000:582e:9aff:feee:bc21
+DST IP:            ff02:0000:0000:0000:0000:0000:0000:0002
+PROTO:             58
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/05/2025-23:40:21.532516
+FLOW PKTS TODST:   1
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  70
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: TRUE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        70
+PACKET:
+ 0000  33 33 00 00 00 02 5A 2E  9A EE BC 21 86 DD 60 00   33....Z. ...!..`.
+ 0010  00 00 00 10 3A FF FE 80  00 00 00 00 00 00 58 2E   ....:... ......X.
+ 0020  9A FF FE EE BC 21 FF 02  00 00 00 00 00 00 00 00   .....!.. ........
+ 0030  00 00 00 00 00 02 85 00  1C B1 00 00 00 00 01 01   ........ ........
+ 0040  5A 2E 9A EE BC 21                                  Z....!
+ALERT CNT:           1
+ALERT MSG [00]:      Puta
+ALERT GID [00]:      1
+ALERT SID [00]:      1
+ALERT REV [00]:      1
+ALERT CLASS [00]:    <none>
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A
+PAYLOAD LEN:         4
+PAYLOAD:
+ 0000  00 00 00 00                                        ....
++================
+TIME:              04/05/2025-23:42:26.456523
+PKT SRC:           wire/pcap
+SRC IP:            fe80:0000:0000:0000:582e:9aff:feee:bc21
+DST IP:            ff02:0000:0000:0000:0000:0000:0000:0002
+PROTO:             58
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/05/2025-23:42:26.456523
+FLOW PKTS TODST:   1
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  70
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: TRUE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        70
+PACKET:
+ 0000  33 33 00 00 00 02 5A 2E  9A EE BC 21 86 DD 60 00   33....Z. ...!..`.
+ 0010  00 00 00 10 3A FF FE 80  00 00 00 00 00 00 58 2E   ....:... ......X.
+ 0020  9A FF FE EE BC 21 FF 02  00 00 00 00 00 00 00 00   .....!.. ........
+ 0030  00 00 00 00 00 02 85 00  1C B1 00 00 00 00 01 01   ........ ........
+ 0040  5A 2E 9A EE BC 21                                  Z....!
+ALERT CNT:           1
+ALERT MSG [00]:      Puta
+ALERT GID [00]:      1
+ALERT SID [00]:      1
+ALERT REV [00]:      1
+ALERT CLASS [00]:    <none>
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A
+PAYLOAD LEN:         4
+PAYLOAD:
+ 0000  00 00 00 00                                        ....

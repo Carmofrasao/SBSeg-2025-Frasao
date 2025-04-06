@@ -1,4 +1,5 @@
-version: '3'
+version: '3.8'
+
 services:
   web-server:
     image: nginx:latest
@@ -14,11 +15,14 @@ services:
     container_name: suricata
     volumes:
       - ./suricata-config:/etc/suricata
-    command: ["iptables", "-I", "INPUT", "-p", "tcp", "-j", "NFQUEUE"]
-    command: ["iptables", "-I", "OUTPUT", "-p", "tcp", "-j", "NFQUEUE"]
-    #command: ["suricata", "-c", "/etc/suricata/suricata.yaml", "-i", "br-320adb667144", "-v"]
-    command: ["suricata", "-c", "/etc/suricata/suricata.yaml", "-q", "0"]
-    network_mode: "host"
+      - ./suricata-logs:/var/log/suricata
+    #command: ["iptables", "-I", "INPUT", "-p", "tcp", "-j", "NFQUEUE"]
+    #command: ["iptables", "-I", "OUTPUT", "-p", "tcp", "-j", "NFQUEUE"]
+    # command: ["suricata", "-c", "/etc/suricata/suricata.yaml", "-q", "0", "-i", "br-37bb6c7158e8"]
+    #command: ["suricata", "-c", "/etc/suricata/suricata.yaml", "-i", "eth0", "--af-packet"]
+    #command: ["suricata", "-c", "/etc/suricata/suricata.yaml", "-q", "0"]
+    command: ["/etc/suricata/entrypoint.sh"]
+    network_mode: bridge
     cap_add:
       - NET_ADMIN
       - NET_RAW
@@ -33,7 +37,6 @@ services:
       my_net:
         ipv4_address: 172.20.0.3
     tty: true
-    command: tail -f /dev/null
 
   attacker:
     image: harbor.c3sl.ufpr.br/sbseg/base:latest 

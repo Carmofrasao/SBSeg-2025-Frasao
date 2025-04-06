@@ -22,7 +22,7 @@ services:
     #command: ["suricata", "-c", "/etc/suricata/suricata.yaml", "-i", "eth0", "--af-packet"]
     #command: ["suricata", "-c", "/etc/suricata/suricata.yaml", "-q", "0"]
     command: ["/etc/suricata/entrypoint.sh"]
-    network_mode: bridge
+    network_mode: host
     cap_add:
       - NET_ADMIN
       - NET_RAW

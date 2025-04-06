@@ -1,6 +1,11 @@
 %YAML 1.1
 ---
 
+af-packet:
+  - interface: br-8375fa58754b
+    threads: auto
+    cluster-id: 99
+
 nfq:
   enabled: yes
   mode: accept 

@@ -26,7 +26,7 @@ services:
       - NET_RAW
       - SYS_NICE
     depends_on:
-      - web-server
+      - web-server 
 
   legit-client:
     image: harbor.c3sl.ufpr.br/sbseg/base:latest 

@@ -1,6 +1,13 @@
 %YAML 1.1
 ---
 
+# IDS
+# af-packet:
+#   - interface: br-eb94eaeaaf5a 
+#     threads: auto
+#     cluster-id: 99
+
+#IPS
 nfq:
   enabled: yes
   mode: route 
@@ -37,5 +44,3 @@ outputs:
   - alert-debug:
       enabled: yes
       filename: /var/log/suricata/alert-debug.log
-
-runmode: workers

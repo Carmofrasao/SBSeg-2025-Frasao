@@ -17,10 +17,12 @@ services:
       - ./suricata-config:/etc/suricata
       - ./suricata-logs:/var/log/suricata
     command: ["/etc/suricata/entrypoint.sh"]
-    #network_mode: bridge 
+    # IPS
     networks:
       my_net:
         ipv4_address: 172.20.0.5
+    # IDS
+    # network_mode: "host"
     cap_add:
       - NET_ADMIN
       - NET_RAW
@@ -31,6 +33,8 @@ services:
   legit-client:
     image: harbor.c3sl.ufpr.br/sbseg/base:latest 
     container_name: client
+    volumes:
+      - ./config:/home
     networks:
       my_net:
         ipv4_address: 172.20.0.3
@@ -39,6 +43,8 @@ services:
   attacker:
     image: harbor.c3sl.ufpr.br/sbseg/base:latest 
     container_name: attacker
+    volumes:
+      - ./config:/home
     networks:
       my_net:
         ipv4_address: 172.20.0.4

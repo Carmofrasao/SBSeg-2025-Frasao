@@ -15,5 +15,3 @@ https://github.com/OISF/suricata
 ### "Ataque"
 
 `hping3 -c 5500 -S -p 80 -i u110 -a 172.20.1.3 172.20.1.2`
-
-* O Suricata está jogando TODOS os pacotes fora com a regra drop... 

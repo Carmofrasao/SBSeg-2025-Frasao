@@ -2,20 +2,21 @@
 ---
 
 nfq:
-  mode: route 
+  #mode: route 
+  mode: repeat
   repeat-mark: 1
   repeat-mask: 1
   queue-num: 0
 
 reputation-categories-file: /etc/suricata/iprep/categories.txt 
+
 default-reputation-path: /etc/suricata/iprep
+reputation-files:
+  - reputation.list
 
 default-rule-path: /etc/suricata/rules
 rule-files:
   - suricata.rules
-
-reputation-files:
-  - /etc/suricata/iprep/reputation.list
 
 unix-command:
   enabled: yes

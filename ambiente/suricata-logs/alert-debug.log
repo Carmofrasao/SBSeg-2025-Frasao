@@ -7662,3 +7662,921 @@ ALERT CLASS [00]:    <none>
 ALERT PRIO [00]:     3
 ALERT FOUND IN [00]: PACKET
 ALERT IN TX [00]:    N/A
++================
+TIME:              04/07/2025-20:38:18.652347
+PKT SRC:           wire/pcap
+SRC IP:            172.20.1.3
+DST IP:            172.20.0.2
+PROTO:             6
+SRC PORT:          50116
+DST PORT:          80
+TCP SEQ:           3789861882
+TCP ACK:           0
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/07/2025-20:38:18.652347
+FLOW PKTS TODST:   1
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  60
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: FALSE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        60
+PACKET:
+ 0000  45 00 00 3C 8C 90 40 00  3F 06 55 FE AC 14 01 03   E..<..@. ?.U.....
+ 0010  AC 14 00 02 C3 C4 00 50  E1 E4 B3 FA 00 00 00 00   .......P ........
+ 0020  A0 02 FA F0 3C 5E 00 00  02 04 05 B4 04 02 08 0A   ....<^.. ........
+ 0030  1E B3 3E DC 00 00 00 00  01 03 03 07               ..>..... ....
+ALERT CNT:           1
+ALERT MSG [00]:      Host mal intencionado detectado
+ALERT GID [00]:      1
+ALERT SID [00]:      2
+ALERT REV [00]:      1
+ALERT CLASS [00]:    <none>
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A
++================
+TIME:              04/07/2025-20:38:19.672654
+PKT SRC:           wire/pcap
+SRC IP:            172.20.1.3
+DST IP:            172.20.0.2
+PROTO:             6
+SRC PORT:          50116
+DST PORT:          80
+TCP SEQ:           3789861882
+TCP ACK:           0
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/07/2025-20:38:18.652347
+FLOW PKTS TODST:   2
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  120
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: FALSE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        60
+PACKET:
+ 0000  45 00 00 3C 8C 91 40 00  3F 06 55 FD AC 14 01 03   E..<..@. ?.U.....
+ 0010  AC 14 00 02 C3 C4 00 50  E1 E4 B3 FA 00 00 00 00   .......P ........
+ 0020  A0 02 FA F0 38 61 00 00  02 04 05 B4 04 02 08 0A   ....8a.. ........
+ 0030  1E B3 42 D9 00 00 00 00  01 03 03 07               ..B..... ....
+ALERT CNT:           1
+ALERT MSG [00]:      Host mal intencionado detectado
+ALERT GID [00]:      1
+ALERT SID [00]:      2
+ALERT REV [00]:      1
+ALERT CLASS [00]:    <none>
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A
++================
+TIME:              04/07/2025-20:38:20.692649
+PKT SRC:           wire/pcap
+SRC IP:            172.20.1.3
+DST IP:            172.20.0.2
+PROTO:             6
+SRC PORT:          50116
+DST PORT:          80
+TCP SEQ:           3789861882
+TCP ACK:           0
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/07/2025-20:38:18.652347
+FLOW PKTS TODST:   3
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  180
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: FALSE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        60
+PACKET:
+ 0000  45 00 00 3C 8C 92 40 00  3F 06 55 FC AC 14 01 03   E..<..@. ?.U.....
+ 0010  AC 14 00 02 C3 C4 00 50  E1 E4 B3 FA 00 00 00 00   .......P ........
+ 0020  A0 02 FA F0 34 65 00 00  02 04 05 B4 04 02 08 0A   ....4e.. ........
+ 0030  1E B3 46 D5 00 00 00 00  01 03 03 07               ..F..... ....
+ALERT CNT:           1
+ALERT MSG [00]:      Host mal intencionado detectado
+ALERT GID [00]:      1
+ALERT SID [00]:      2
+ALERT REV [00]:      1
+ALERT CLASS [00]:    <none>
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A
++================
+TIME:              04/07/2025-20:38:21.720817
+PKT SRC:           wire/pcap
+SRC IP:            172.20.1.3
+DST IP:            172.20.0.2
+PROTO:             6
+SRC PORT:          50116
+DST PORT:          80
+TCP SEQ:           3789861882
+TCP ACK:           0
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/07/2025-20:38:18.652347
+FLOW PKTS TODST:   4
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  240
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: FALSE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        60
+PACKET:
+ 0000  45 00 00 3C 8C 93 40 00  3F 06 55 FB AC 14 01 03   E..<..@. ?.U.....
+ 0010  AC 14 00 02 C3 C4 00 50  E1 E4 B3 FA 00 00 00 00   .......P ........
+ 0020  A0 02 FA F0 30 61 00 00  02 04 05 B4 04 02 08 0A   ....0a.. ........
+ 0030  1E B3 4A D9 00 00 00 00  01 03 03 07               ..J..... ....
+ALERT CNT:           1
+ALERT MSG [00]:      Host mal intencionado detectado
+ALERT GID [00]:      1
+ALERT SID [00]:      2
+ALERT REV [00]:      1
+ALERT CLASS [00]:    <none>
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A
++================
+TIME:              04/07/2025-20:38:22.740639
+PKT SRC:           wire/pcap
+SRC IP:            172.20.1.3
+DST IP:            172.20.0.2
+PROTO:             6
+SRC PORT:          50116
+DST PORT:          80
+TCP SEQ:           3789861882
+TCP ACK:           0
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/07/2025-20:38:18.652347
+FLOW PKTS TODST:   5
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  300
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: FALSE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        60
+PACKET:
+ 0000  45 00 00 3C 8C 94 40 00  3F 06 55 FA AC 14 01 03   E..<..@. ?.U.....
+ 0010  AC 14 00 02 C3 C4 00 50  E1 E4 B3 FA 00 00 00 00   .......P ........
+ 0020  A0 02 FA F0 2C 65 00 00  02 04 05 B4 04 02 08 0A   ....,e.. ........
+ 0030  1E B3 4E D5 00 00 00 00  01 03 03 07               ..N..... ....
+ALERT CNT:           1
+ALERT MSG [00]:      Host mal intencionado detectado
+ALERT GID [00]:      1
+ALERT SID [00]:      2
+ALERT REV [00]:      1
+ALERT CLASS [00]:    <none>
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A
++================
+TIME:              04/07/2025-20:38:23.764641
+PKT SRC:           wire/pcap
+SRC IP:            172.20.1.3
+DST IP:            172.20.0.2
+PROTO:             6
+SRC PORT:          50116
+DST PORT:          80
+TCP SEQ:           3789861882
+TCP ACK:           0
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/07/2025-20:38:18.652347
+FLOW PKTS TODST:   6
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  360
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: FALSE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        60
+PACKET:
+ 0000  45 00 00 3C 8C 95 40 00  3F 06 55 F9 AC 14 01 03   E..<..@. ?.U.....
+ 0010  AC 14 00 02 C3 C4 00 50  E1 E4 B3 FA 00 00 00 00   .......P ........
+ 0020  A0 02 FA F0 28 65 00 00  02 04 05 B4 04 02 08 0A   ....(e.. ........
+ 0030  1E B3 52 D5 00 00 00 00  01 03 03 07               ..R..... ....
+ALERT CNT:           1
+ALERT MSG [00]:      Host mal intencionado detectado
+ALERT GID [00]:      1
+ALERT SID [00]:      2
+ALERT REV [00]:      1
+ALERT CLASS [00]:    <none>
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A
++================
+TIME:              04/07/2025-20:38:25.784642
+PKT SRC:           wire/pcap
+SRC IP:            172.20.1.3
+DST IP:            172.20.0.2
+PROTO:             6
+SRC PORT:          50116
+DST PORT:          80
+TCP SEQ:           3789861882
+TCP ACK:           0
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/07/2025-20:38:18.652347
+FLOW PKTS TODST:   7
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  420
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: FALSE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        60
+PACKET:
+ 0000  45 00 00 3C 8C 96 40 00  3F 06 55 F8 AC 14 01 03   E..<..@. ?.U.....
+ 0010  AC 14 00 02 C3 C4 00 50  E1 E4 B3 FA 00 00 00 00   .......P ........
+ 0020  A0 02 FA F0 20 81 00 00  02 04 05 B4 04 02 08 0A   .... ... ........
+ 0030  1E B3 5A B9 00 00 00 00  01 03 03 07               ..Z..... ....
+ALERT CNT:           1
+ALERT MSG [00]:      Host mal intencionado detectado
+ALERT GID [00]:      1
+ALERT SID [00]:      2
+ALERT REV [00]:      1
+ALERT CLASS [00]:    <none>
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A
++================
+TIME:              04/07/2025-20:38:29.908739
+PKT SRC:           wire/pcap
+SRC IP:            172.20.1.3
+DST IP:            172.20.0.2
+PROTO:             6
+SRC PORT:          50116
+DST PORT:          80
+TCP SEQ:           3789861882
+TCP ACK:           0
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/07/2025-20:38:18.652347
+FLOW PKTS TODST:   8
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  480
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: FALSE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        60
+PACKET:
+ 0000  45 00 00 3C 8C 97 40 00  3F 06 55 F7 AC 14 01 03   E..<..@. ?.U.....
+ 0010  AC 14 00 02 C3 C4 00 50  E1 E4 B3 FA 00 00 00 00   .......P ........
+ 0020  A0 02 FA F0 10 65 00 00  02 04 05 B4 04 02 08 0A   .....e.. ........
+ 0030  1E B3 6A D5 00 00 00 00  01 03 03 07               ..j..... ....
+ALERT CNT:           1
+ALERT MSG [00]:      Host mal intencionado detectado
+ALERT GID [00]:      1
+ALERT SID [00]:      2
+ALERT REV [00]:      1
+ALERT CLASS [00]:    <none>
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A
++================
+TIME:              04/07/2025-20:38:38.104634
+PKT SRC:           wire/pcap
+SRC IP:            172.20.1.3
+DST IP:            172.20.0.2
+PROTO:             6
+SRC PORT:          50116
+DST PORT:          80
+TCP SEQ:           3789861882
+TCP ACK:           0
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/07/2025-20:38:18.652347
+FLOW PKTS TODST:   9
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  540
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: FALSE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        60
+PACKET:
+ 0000  45 00 00 3C 8C 98 40 00  3F 06 55 F6 AC 14 01 03   E..<..@. ?.U.....
+ 0010  AC 14 00 02 C3 C4 00 50  E1 E4 B3 FA 00 00 00 00   .......P ........
+ 0020  A0 02 FA F0 F0 60 00 00  02 04 05 B4 04 02 08 0A   .....`.. ........
+ 0030  1E B3 8A D9 00 00 00 00  01 03 03 07               ........ ....
+ALERT CNT:           1
+ALERT MSG [00]:      Host mal intencionado detectado
+ALERT GID [00]:      1
+ALERT SID [00]:      2
+ALERT REV [00]:      1
+ALERT CLASS [00]:    <none>
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A
++================
+TIME:              04/07/2025-20:41:49.774150
+PKT SRC:           wire/pcap
+SRC IP:            172.20.1.3
+DST IP:            172.20.0.2
+PROTO:             6
+SRC PORT:          40848
+DST PORT:          80
+TCP SEQ:           2926884621
+TCP ACK:           0
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/07/2025-20:41:49.774150
+FLOW PKTS TODST:   1
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  60
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: FALSE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        60
+PACKET:
+ 0000  45 00 00 3C 44 16 40 00  3F 06 9E 78 AC 14 01 03   E..<D.@. ?..x....
+ 0010  AC 14 00 02 9F 90 00 50  AE 74 B7 0D 00 00 00 00   .......P .t......
+ 0020  A0 02 FA F0 58 3A 00 00  02 04 05 B4 04 02 08 0A   ....X:.. ........
+ 0030  1E B6 77 8E 00 00 00 00  01 03 03 07               ..w..... ....
+ALERT CNT:           1
+ALERT MSG [00]:      Host mal intencionado detectado
+ALERT GID [00]:      1
+ALERT SID [00]:      2
+ALERT REV [00]:      1
+ALERT CLASS [00]:    <none>
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A
++================
+TIME:              04/07/2025-20:41:50.808648
+PKT SRC:           wire/pcap
+SRC IP:            172.20.1.3
+DST IP:            172.20.0.2
+PROTO:             6
+SRC PORT:          40848
+DST PORT:          80
+TCP SEQ:           2926884621
+TCP ACK:           0
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/07/2025-20:41:49.774150
+FLOW PKTS TODST:   2
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  120
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: FALSE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        60
+PACKET:
+ 0000  45 00 00 3C 44 17 40 00  3F 06 9E 77 AC 14 01 03   E..<D.@. ?..w....
+ 0010  AC 14 00 02 9F 90 00 50  AE 74 B7 0D 00 00 00 00   .......P .t......
+ 0020  A0 02 FA F0 54 2F 00 00  02 04 05 B4 04 02 08 0A   ....T/.. ........
+ 0030  1E B6 7B 99 00 00 00 00  01 03 03 07               ..{..... ....
+ALERT CNT:           1
+ALERT MSG [00]:      Host mal intencionado detectado
+ALERT GID [00]:      1
+ALERT SID [00]:      2
+ALERT REV [00]:      1
+ALERT CLASS [00]:    <none>
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A
++================
+TIME:              04/07/2025-20:41:51.828638
+PKT SRC:           wire/pcap
+SRC IP:            172.20.1.3
+DST IP:            172.20.0.2
+PROTO:             6
+SRC PORT:          40848
+DST PORT:          80
+TCP SEQ:           2926884621
+TCP ACK:           0
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/07/2025-20:41:49.774150
+FLOW PKTS TODST:   3
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  180
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: FALSE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        60
+PACKET:
+ 0000  45 00 00 3C 44 18 40 00  3F 06 9E 76 AC 14 01 03   E..<D.@. ?..v....
+ 0010  AC 14 00 02 9F 90 00 50  AE 74 B7 0D 00 00 00 00   .......P .t......
+ 0020  A0 02 FA F0 50 33 00 00  02 04 05 B4 04 02 08 0A   ....P3.. ........
+ 0030  1E B6 7F 95 00 00 00 00  01 03 03 07               ........ ....
+ALERT CNT:           1
+ALERT MSG [00]:      Host mal intencionado detectado
+ALERT GID [00]:      1
+ALERT SID [00]:      2
+ALERT REV [00]:      1
+ALERT CLASS [00]:    <none>
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A
++================
+TIME:              04/07/2025-20:41:52.852644
+PKT SRC:           wire/pcap
+SRC IP:            172.20.1.3
+DST IP:            172.20.0.2
+PROTO:             6
+SRC PORT:          40848
+DST PORT:          80
+TCP SEQ:           2926884621
+TCP ACK:           0
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/07/2025-20:41:49.774150
+FLOW PKTS TODST:   4
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  240
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: FALSE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        60
+PACKET:
+ 0000  45 00 00 3C 44 19 40 00  3F 06 9E 75 AC 14 01 03   E..<D.@. ?..u....
+ 0010  AC 14 00 02 9F 90 00 50  AE 74 B7 0D 00 00 00 00   .......P .t......
+ 0020  A0 02 FA F0 4C 33 00 00  02 04 05 B4 04 02 08 0A   ....L3.. ........
+ 0030  1E B6 83 95 00 00 00 00  01 03 03 07               ........ ....
+ALERT CNT:           1
+ALERT MSG [00]:      Host mal intencionado detectado
+ALERT GID [00]:      1
+ALERT SID [00]:      2
+ALERT REV [00]:      1
+ALERT CLASS [00]:    <none>
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A
++================
+TIME:              04/07/2025-20:41:53.880636
+PKT SRC:           wire/pcap
+SRC IP:            172.20.1.3
+DST IP:            172.20.0.2
+PROTO:             6
+SRC PORT:          40848
+DST PORT:          80
+TCP SEQ:           2926884621
+TCP ACK:           0
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/07/2025-20:41:49.774150
+FLOW PKTS TODST:   5
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  300
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: FALSE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        60
+PACKET:
+ 0000  45 00 00 3C 44 1A 40 00  3F 06 9E 74 AC 14 01 03   E..<D.@. ?..t....
+ 0010  AC 14 00 02 9F 90 00 50  AE 74 B7 0D 00 00 00 00   .......P .t......
+ 0020  A0 02 FA F0 48 2F 00 00  02 04 05 B4 04 02 08 0A   ....H/.. ........
+ 0030  1E B6 87 99 00 00 00 00  01 03 03 07               ........ ....
+ALERT CNT:           1
+ALERT MSG [00]:      Host mal intencionado detectado
+ALERT GID [00]:      1
+ALERT SID [00]:      2
+ALERT REV [00]:      1
+ALERT CLASS [00]:    <none>
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A
++================
+TIME:              04/07/2025-20:41:54.904653
+PKT SRC:           wire/pcap
+SRC IP:            172.20.1.3
+DST IP:            172.20.0.2
+PROTO:             6
+SRC PORT:          40848
+DST PORT:          80
+TCP SEQ:           2926884621
+TCP ACK:           0
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/07/2025-20:41:49.774150
+FLOW PKTS TODST:   6
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  360
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: FALSE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        60
+PACKET:
+ 0000  45 00 00 3C 44 1B 40 00  3F 06 9E 73 AC 14 01 03   E..<D.@. ?..s....
+ 0010  AC 14 00 02 9F 90 00 50  AE 74 B7 0D 00 00 00 00   .......P .t......
+ 0020  A0 02 FA F0 44 2F 00 00  02 04 05 B4 04 02 08 0A   ....D/.. ........
+ 0030  1E B6 8B 99 00 00 00 00  01 03 03 07               ........ ....
+ALERT CNT:           1
+ALERT MSG [00]:      Host mal intencionado detectado
+ALERT GID [00]:      1
+ALERT SID [00]:      2
+ALERT REV [00]:      1
+ALERT CLASS [00]:    <none>
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A
++================
+TIME:              04/07/2025-20:42:26.366092
+PKT SRC:           wire/pcap
+SRC IP:            172.20.1.3
+DST IP:            172.20.0.2
+PROTO:             6
+SRC PORT:          34308
+DST PORT:          80
+TCP SEQ:           2280328805
+TCP ACK:           0
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/07/2025-20:42:26.366092
+FLOW PKTS TODST:   1
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  60
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: FALSE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        60
+PACKET:
+ 0000  45 00 00 3C B2 73 40 00  3F 06 30 1B AC 14 01 03   E..<.s@. ?.0.....
+ 0010  AC 14 00 02 86 04 00 50  87 EB 0E 65 00 00 00 00   .......P ...e....
+ 0020  A0 02 FA F0 B2 07 00 00  02 04 05 B4 04 02 08 0A   ........ ........
+ 0030  1E B7 06 7E 00 00 00 00  01 03 03 07               ...~.... ....
+ALERT CNT:           1
+ALERT MSG [00]:      Host mal intencionado detectado
+ALERT GID [00]:      1
+ALERT SID [00]:      2
+ALERT REV [00]:      1
+ALERT CLASS [00]:    <none>
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A
++================
+TIME:              04/07/2025-20:42:27.384655
+PKT SRC:           wire/pcap
+SRC IP:            172.20.1.3
+DST IP:            172.20.0.2
+PROTO:             6
+SRC PORT:          34308
+DST PORT:          80
+TCP SEQ:           2280328805
+TCP ACK:           0
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/07/2025-20:42:26.366092
+FLOW PKTS TODST:   2
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  120
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: FALSE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        60
+PACKET:
+ 0000  45 00 00 3C B2 74 40 00  3F 06 30 1A AC 14 01 03   E..<.t@. ?.0.....
+ 0010  AC 14 00 02 86 04 00 50  87 EB 0E 65 00 00 00 00   .......P ...e....
+ 0020  A0 02 FA F0 AE 0C 00 00  02 04 05 B4 04 02 08 0A   ........ ........
+ 0030  1E B7 0A 79 00 00 00 00  01 03 03 07               ...y.... ....
+ALERT CNT:           1
+ALERT MSG [00]:      Host mal intencionado detectado
+ALERT GID [00]:      1
+ALERT SID [00]:      2
+ALERT REV [00]:      1
+ALERT CLASS [00]:    <none>
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A
++================
+TIME:              04/07/2025-20:42:28.404637
+PKT SRC:           wire/pcap
+SRC IP:            172.20.1.3
+DST IP:            172.20.0.2
+PROTO:             6
+SRC PORT:          34308
+DST PORT:          80
+TCP SEQ:           2280328805
+TCP ACK:           0
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/07/2025-20:42:26.366092
+FLOW PKTS TODST:   3
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  180
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: FALSE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        60
+PACKET:
+ 0000  45 00 00 3C B2 75 40 00  3F 06 30 19 AC 14 01 03   E..<.u@. ?.0.....
+ 0010  AC 14 00 02 86 04 00 50  87 EB 0E 65 00 00 00 00   .......P ...e....
+ 0020  A0 02 FA F0 AA 10 00 00  02 04 05 B4 04 02 08 0A   ........ ........
+ 0030  1E B7 0E 75 00 00 00 00  01 03 03 07               ...u.... ....
+ALERT CNT:           1
+ALERT MSG [00]:      Host mal intencionado detectado
+ALERT GID [00]:      1
+ALERT SID [00]:      2
+ALERT REV [00]:      1
+ALERT CLASS [00]:    <none>
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A
++================
+TIME:              04/07/2025-20:42:29.428651
+PKT SRC:           wire/pcap
+SRC IP:            172.20.1.3
+DST IP:            172.20.0.2
+PROTO:             6
+SRC PORT:          34308
+DST PORT:          80
+TCP SEQ:           2280328805
+TCP ACK:           0
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/07/2025-20:42:26.366092
+FLOW PKTS TODST:   4
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  240
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: FALSE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        60
+PACKET:
+ 0000  45 00 00 3C B2 76 40 00  3F 06 30 18 AC 14 01 03   E..<.v@. ?.0.....
+ 0010  AC 14 00 02 86 04 00 50  87 EB 0E 65 00 00 00 00   .......P ...e....
+ 0020  A0 02 FA F0 A6 10 00 00  02 04 05 B4 04 02 08 0A   ........ ........
+ 0030  1E B7 12 75 00 00 00 00  01 03 03 07               ...u.... ....
+ALERT CNT:           1
+ALERT MSG [00]:      Host mal intencionado detectado
+ALERT GID [00]:      1
+ALERT SID [00]:      2
+ALERT REV [00]:      1
+ALERT CLASS [00]:    <none>
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A
++================
+TIME:              04/07/2025-20:42:30.452641
+PKT SRC:           wire/pcap
+SRC IP:            172.20.1.3
+DST IP:            172.20.0.2
+PROTO:             6
+SRC PORT:          34308
+DST PORT:          80
+TCP SEQ:           2280328805
+TCP ACK:           0
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/07/2025-20:42:26.366092
+FLOW PKTS TODST:   5
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  300
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: FALSE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        60
+PACKET:
+ 0000  45 00 00 3C B2 77 40 00  3F 06 30 17 AC 14 01 03   E..<.w@. ?.0.....
+ 0010  AC 14 00 02 86 04 00 50  87 EB 0E 65 00 00 00 00   .......P ...e....
+ 0020  A0 02 FA F0 A2 10 00 00  02 04 05 B4 04 02 08 0A   ........ ........
+ 0030  1E B7 16 75 00 00 00 00  01 03 03 07               ...u.... ....
+ALERT CNT:           1
+ALERT MSG [00]:      Host mal intencionado detectado
+ALERT GID [00]:      1
+ALERT SID [00]:      2
+ALERT REV [00]:      1
+ALERT CLASS [00]:    <none>
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A
++================
+TIME:              04/07/2025-20:42:31.480632
+PKT SRC:           wire/pcap
+SRC IP:            172.20.1.3
+DST IP:            172.20.0.2
+PROTO:             6
+SRC PORT:          34308
+DST PORT:          80
+TCP SEQ:           2280328805
+TCP ACK:           0
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/07/2025-20:42:26.366092
+FLOW PKTS TODST:   6
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  360
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: FALSE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        60
+PACKET:
+ 0000  45 00 00 3C B2 78 40 00  3F 06 30 16 AC 14 01 03   E..<.x@. ?.0.....
+ 0010  AC 14 00 02 86 04 00 50  87 EB 0E 65 00 00 00 00   .......P ...e....
+ 0020  A0 02 FA F0 9E 0C 00 00  02 04 05 B4 04 02 08 0A   ........ ........
+ 0030  1E B7 1A 79 00 00 00 00  01 03 03 07               ...y.... ....
+ALERT CNT:           1
+ALERT MSG [00]:      Host mal intencionado detectado
+ALERT GID [00]:      1
+ALERT SID [00]:      2
+ALERT REV [00]:      1
+ALERT CLASS [00]:    <none>
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A
++================
+TIME:              04/07/2025-20:42:33.496669
+PKT SRC:           wire/pcap
+SRC IP:            172.20.1.3
+DST IP:            172.20.0.2
+PROTO:             6
+SRC PORT:          34308
+DST PORT:          80
+TCP SEQ:           2280328805
+TCP ACK:           0
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/07/2025-20:42:26.366092
+FLOW PKTS TODST:   7
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  420
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: FALSE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        60
+PACKET:
+ 0000  45 00 00 3C B2 79 40 00  3F 06 30 15 AC 14 01 03   E..<.y@. ?.0.....
+ 0010  AC 14 00 02 86 04 00 50  87 EB 0E 65 00 00 00 00   .......P ...e....
+ 0020  A0 02 FA F0 96 2C 00 00  02 04 05 B4 04 02 08 0A   .....,.. ........
+ 0030  1E B7 22 59 00 00 00 00  01 03 03 07               .."Y.... ....
+ALERT CNT:           1
+ALERT MSG [00]:      Host mal intencionado detectado
+ALERT GID [00]:      1
+ALERT SID [00]:      2
+ALERT REV [00]:      1
+ALERT CLASS [00]:    <none>
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A
++================
+TIME:              04/07/2025-20:42:37.720649
+PKT SRC:           wire/pcap
+SRC IP:            172.20.1.3
+DST IP:            172.20.0.2
+PROTO:             6
+SRC PORT:          34308
+DST PORT:          80
+TCP SEQ:           2280328805
+TCP ACK:           0
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/07/2025-20:42:26.366092
+FLOW PKTS TODST:   8
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  480
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: FALSE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        60
+PACKET:
+ 0000  45 00 00 3C B2 7A 40 00  3F 06 30 14 AC 14 01 03   E..<.z@. ?.0.....
+ 0010  AC 14 00 02 86 04 00 50  87 EB 0E 65 00 00 00 00   .......P ...e....
+ 0020  A0 02 FA F0 85 AC 00 00  02 04 05 B4 04 02 08 0A   ........ ........
+ 0030  1E B7 32 D9 00 00 00 00  01 03 03 07               ..2..... ....
+ALERT CNT:           1
+ALERT MSG [00]:      Host mal intencionado detectado
+ALERT GID [00]:      1
+ALERT SID [00]:      2
+ALERT REV [00]:      1
+ALERT CLASS [00]:    <none>
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A
++================
+TIME:              04/07/2025-20:42:45.912647
+PKT SRC:           wire/pcap
+SRC IP:            172.20.1.3
+DST IP:            172.20.0.2
+PROTO:             6
+SRC PORT:          34308
+DST PORT:          80
+TCP SEQ:           2280328805
+TCP ACK:           0
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/07/2025-20:42:26.366092
+FLOW PKTS TODST:   9
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  540
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: FALSE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        60
+PACKET:
+ 0000  45 00 00 3C B2 7B 40 00  3F 06 30 13 AC 14 01 03   E..<.{@. ?.0.....
+ 0010  AC 14 00 02 86 04 00 50  87 EB 0E 65 00 00 00 00   .......P ...e....
+ 0020  A0 02 FA F0 65 AC 00 00  02 04 05 B4 04 02 08 0A   ....e... ........
+ 0030  1E B7 52 D9 00 00 00 00  01 03 03 07               ..R..... ....
+ALERT CNT:           1
+ALERT MSG [00]:      Host mal intencionado detectado
+ALERT GID [00]:      1
+ALERT SID [00]:      2
+ALERT REV [00]:      1
+ALERT CLASS [00]:    <none>
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A
++================
+TIME:              04/07/2025-20:43:00.222790
+PKT SRC:           wire/pcap
+SRC IP:            172.20.1.3
+DST IP:            172.20.0.2
+PROTO:             6
+SRC PORT:          41990
+DST PORT:          80
+TCP SEQ:           2877206138
+TCP ACK:           0
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/07/2025-20:43:00.222790
+FLOW PKTS TODST:   1
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  60
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: FALSE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        60
+PACKET:
+ 0000  45 00 00 3C 44 78 40 00  3F 06 9E 16 AC 14 01 03   E..<Dx@. ?.......
+ 0010  AC 14 00 02 A4 06 00 50  AB 7E AE 7A 00 00 00 00   .......P .~.z....
+ 0020  A0 02 FA F0 4C 1B 00 00  02 04 05 B4 04 02 08 0A   ....L... ........
+ 0030  1E B7 8A BF 00 00 00 00  01 03 03 07               ........ ....
+ALERT CNT:           1
+ALERT MSG [00]:      Host mal intencionado detectado
+ALERT GID [00]:      1
+ALERT SID [00]:      2
+ALERT REV [00]:      1
+ALERT CLASS [00]:    <none>
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A
++================
+TIME:              04/07/2025-20:43:01.240638
+PKT SRC:           wire/pcap
+SRC IP:            172.20.1.3
+DST IP:            172.20.0.2
+PROTO:             6
+SRC PORT:          41990
+DST PORT:          80
+TCP SEQ:           2877206138
+TCP ACK:           0
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/07/2025-20:43:00.222790
+FLOW PKTS TODST:   2
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  120
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: FALSE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        60
+PACKET:
+ 0000  45 00 00 3C 44 79 40 00  3F 06 9E 15 AC 14 01 03   E..<Dy@. ?.......
+ 0010  AC 14 00 02 A4 06 00 50  AB 7E AE 7A 00 00 00 00   .......P .~.z....
+ 0020  A0 02 FA F0 48 21 00 00  02 04 05 B4 04 02 08 0A   ....H!.. ........
+ 0030  1E B7 8E B9 00 00 00 00  01 03 03 07               ........ ....
+ALERT CNT:           1
+ALERT MSG [00]:      Host mal intencionado detectado
+ALERT GID [00]:      1
+ALERT SID [00]:      2
+ALERT REV [00]:      1
+ALERT CLASS [00]:    <none>
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A
++================
+TIME:              04/07/2025-20:43:02.264650
+PKT SRC:           wire/pcap
+SRC IP:            172.20.1.3
+DST IP:            172.20.0.2
+PROTO:             6
+SRC PORT:          41990
+DST PORT:          80
+TCP SEQ:           2877206138
+TCP ACK:           0
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/07/2025-20:43:00.222790
+FLOW PKTS TODST:   3
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  180
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: FALSE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        60
+PACKET:
+ 0000  45 00 00 3C 44 7A 40 00  3F 06 9E 14 AC 14 01 03   E..<Dz@. ?.......
+ 0010  AC 14 00 02 A4 06 00 50  AB 7E AE 7A 00 00 00 00   .......P .~.z....
+ 0020  A0 02 FA F0 44 21 00 00  02 04 05 B4 04 02 08 0A   ....D!.. ........
+ 0030  1E B7 92 B9 00 00 00 00  01 03 03 07               ........ ....
+ALERT CNT:           1
+ALERT MSG [00]:      Host mal intencionado detectado
+ALERT GID [00]:      1
+ALERT SID [00]:      2
+ALERT REV [00]:      1
+ALERT CLASS [00]:    <none>
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A

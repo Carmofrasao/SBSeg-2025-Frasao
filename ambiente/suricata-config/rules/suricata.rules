@@ -1,3 +1,2 @@
-alert tcp any any -> any any (msg:"BadHosts"; flow:to_server; flags: S; threshold: type both, track by_dst, count 5000, seconds 5; classtype:misc-activity; sid:5;)
-drop ip any any -> any any (msg:"Host mal intencionado detectado"; flow:to_server; iprep:src,BadHosts,<,10; sid:1; rev:1;)
-#drop ip any any -> any any (msg:"Puta"; sid:1; rev:1;)
+alert tcp any any -> any any (msg:"BadHosts"; flags: S; threshold: type both, track by_dst, count 500, seconds 5; classtype:misc-activity; sid:1;)
+drop ip any any -> any any (msg:"Host mal intencionado detectado"; iprep:src,BadHosts,<,10; sid:2;)

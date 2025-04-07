@@ -16,4 +16,4 @@ https://github.com/OISF/suricata
 
 `hping3 -c 5500 -S -p 80 -i u110 -a 172.20.1.3 172.20.1.2`
 
-* O ataque não esta funcionando, o Suricata esta funcionando, de mais..., ele está jogando os pacotes do hping3 fora
+* O ataque não esta funcionando, o Suricata esta funcionando, de mais..., ele está jogando TODOS os pacotes fora com a regra drop... 

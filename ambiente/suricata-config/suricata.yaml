@@ -1,19 +1,13 @@
 %YAML 1.1
 ---
 
-# IDS
-# af-packet:
-#   - interface: br-eb94eaeaaf5a 
-#     threads: auto
-#     cluster-id: 99
-
-#IPS
 nfq:
-  enabled: yes
-  mode: route 
+  mode: accept
   repeat-mark: 1
   repeat-mask: 1
   queue-num: 0
+  queue-threshold: 1024
+  queue-bypass: no
 
 reputation-categories-file: /etc/suricata/iprep/categories.txt 
 default-reputation-path: /etc/suricata/iprep

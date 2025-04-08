@@ -14,7 +14,6 @@ class EventHandler(pyinotify.ProcessEvent):
                     pass
                 event = json.loads(line)
                 if 'alert' in event:
-                    print(event)
                     src_ip = event['src_ip']
                     if src_ip:
                         update_reputation(src_ip)
@@ -22,7 +21,7 @@ class EventHandler(pyinotify.ProcessEvent):
 def update_reputation(ip):
     if not os.path.exists(reputation_file):
         with open(reputation_file, 'w') as f:
-            f.write(f"{ip},3,117\n")
+            f.write(f"{ip},2,7\n")
     else:
         with open(reputation_file, 'r+') as f:
             lines = f.readlines()
@@ -37,31 +36,31 @@ def update_reputation(ip):
                     if new_category == 3:
                       # Caso onde a reputação esta baixa de mais, abaixa a categoria e reseta a reputação
                       if new_reputation < 10:
-                        new_reputation = 10 
+                        new_reputation = 7 
                         new_category = 2
                       # Caso onde a reputação ainda esta boa 
                       else:
-                        new_reputation -= 10
+                        new_reputation -= 20
                     # Caso onde a categoria é GreyHost
                     elif new_category == 2:
                       # Caso onde a reputação esta alta de mais, abaixa a categoria e reseta a reputação
-                      if new_reputation > 100:
-                        new_reputation = 10
+                      if new_reputation > 120:
+                        new_reputation = 7
                         new_category = 1
                       # Caso onde a reputação ainda esta boa 
                       else:
-                        new_reputation += 10
+                        new_reputation += 20
                     # Caso onde a categoria é BadHost
                     elif new_category == 1:
                       # Caso onde a reputação ainda esta "boa" 
-                      if new_reputation <= 100:
-                        new_reputation += 10
+                      if new_reputation <= 107:
+                        new_reputation += 20
                       # Depois disso, a regra de drop joga os pacotes fora! 
 
                     lines[i] = f"{ip},{new_category},{new_reputation}\n"
                     break
             else:
-                lines.append(f"{ip},3,117\n")
+                lines.append(f"{ip},2,7\n")
             f.seek(0)
             f.writelines(lines)
     reload_suricata()

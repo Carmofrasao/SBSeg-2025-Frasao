@@ -51,10 +51,6 @@ O arquivo config.sh atualiza o sistema e baixa algumas ferramentas para o experi
 
 O `wget` é para teste de funcionamento de rede (Recomendo executar esse comando durante todo o teste, em algum momento, ele vai parar de funcionar, o ataque funcionou!).
 
-### Teste de funcionamento de rede
-
-`wget -qO- 172.20.1.2`
-
 ### Maquina attacker 
 
 Execute os seguintes comando:

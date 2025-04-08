@@ -5,29 +5,21 @@ import subprocess
 
 log_file = '/etc/suricata/eve.json'
 reputation_file = '/etc/suricata/iprep/reputation.list'
-categories = {
-    'BadHosts': 1,
-    'GreyHosts': 2,
-    'GoodHosts': 3,
-}
-seen_ips = {}
 
 class EventHandler(pyinotify.ProcessEvent):
     def process_IN_MODIFY(self, event):
         if event.pathname == log_file:
             with open(log_file, 'r') as f:
                 for line in f:
-                    try:
-                        event = json.loads(line)
-                        if 'alert' in event:
-                            src_ip = event['src_ip']
-                            alert_msg = event['alert'].get('signature')
-                            if src_ip and alert_msg:
-                                update_reputation(src_ip, alert_msg)
-                    except json.JSONDecodeError:
-                        continue
+                    pass
+                event = json.loads(line)
+                if 'alert' in event:
+                    print(event)
+                    src_ip = event['src_ip']
+                    if src_ip:
+                        update_reputation(src_ip)
 
-def update_reputation(ip, alert_msg):
+def update_reputation(ip):
     if not os.path.exists(reputation_file):
         with open(reputation_file, 'w') as f:
             f.write(f"{ip},3,90\n")
@@ -37,16 +29,35 @@ def update_reputation(ip, alert_msg):
             for i, line in enumerate(lines):
                 # Caso onde o IP ja esta em reputation.list
                 if line.startswith(ip):
-                    new_reputation = int(line.strip(",")[2])
-                    if new_reputation > 0:
-                        new_reputation -= 10
-                     
-                    new_category = int(line.strip(",")[1])
-                    if new_reputation < 70:
+                    # Para o GoodHost, quanto mais alta a reputação, melhor
+                    # Para o GreyHost e BadHost, quanto mais alta a reputação, pior
+                    new_category = int(line.split(",")[1])
+                    new_reputation = int(line.split(",")[2])
+                    # Caso onde a categoria é GoodHost
+                    if new_category == 3:
+                      # Caso onde a reputação esta baixa de mais, abaixa a categoria e reseta a reputação
+                      if new_reputation < 10:
+                        new_reputation = 10 
                         new_category = 2
-                    elif new_reputation < 30:
+                      # Caso onde a reputação ainda esta boa 
+                      else:
+                        new_reputation -= 10
+                    # Caso onde a categoria é GreyHost
+                    elif new_category == 2:
+                      # Caso onde a reputação esta alta de mais, abaixa a categoria e reseta a reputação
+                      if new_reputation > 100:
+                        new_reputation = 10
                         new_category = 1
-                        
+                      # Caso onde a reputação ainda esta boa 
+                      else:
+                        new_reputation += 10
+                    # Caso onde a categoria é BadHost
+                    elif new_category == 1:
+                      # Caso onde a reputação ainda esta "boa" 
+                      if new_reputation <= 100:
+                        new_reputation += 10
+                      # Depois disso, a regra de drop joga os pacotes fora! 
+
                     lines[i] = f"{ip},{new_category},{new_reputation}\n"
                     break
             else:
@@ -57,7 +68,6 @@ def update_reputation(ip, alert_msg):
 
 def reload_suricata():
     subprocess.run(['suricatasc', '-c', 'ruleset-reload-nonblocking'])
-    # suricatasc -c "reload-rules"
 
 wm = pyinotify.WatchManager()
 handler = EventHandler()

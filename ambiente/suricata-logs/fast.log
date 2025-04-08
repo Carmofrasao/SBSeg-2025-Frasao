@@ -1,0 +1,3 @@
+04/08/2025-16:20:47.977783  [**] [1:1:0] BadHosts [**] [Classification: Misc activity] [Priority: 3] {TCP} 172.20.1.3:6362 -> 172.20.0.2:80
+04/08/2025-16:22:47.160160  [**] [1:1:0] BadHosts [**] [Classification: Misc activity] [Priority: 3] {TCP} 172.20.1.3:7142 -> 172.20.0.2:80
+04/08/2025-16:42:30.362800  [**] [1:1:0] BadHosts [**] [Classification: Misc activity] [Priority: 3] {TCP} 172.20.1.3:7170 -> 172.20.0.2:80

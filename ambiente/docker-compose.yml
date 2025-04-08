@@ -44,7 +44,7 @@ services:
       - "80:80"
 
   legit-client:
-    image: harbor.c3sl.ufpr.br/sbseg/base:latest 
+    image: debian:latest 
     container_name: client
     volumes:
       - ./config:/home
@@ -54,7 +54,7 @@ services:
     tty: true
 
   attacker:
-    image: harbor.c3sl.ufpr.br/sbseg/base:latest 
+    image: debian:latest 
     container_name: attacker
     volumes:
       - ./config:/home

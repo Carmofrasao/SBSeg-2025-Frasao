@@ -1,0 +1,99 @@
++================
+TIME:              04/08/2025-16:20:47.977783
+PKT SRC:           wire/pcap
+SRC IP:            172.20.1.3
+DST IP:            172.20.0.2
+PROTO:             6
+SRC PORT:          6362
+DST PORT:          80
+TCP SEQ:           894888727
+TCP ACK:           861348475
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/08/2025-16:20:47.977783
+FLOW PKTS TODST:   1
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  40
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: FALSE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        40
+PACKET:
+ 0000  45 00 00 28 E4 22 00 00  3F 06 3E 80 AC 14 01 03   E..(.".. ?.>.....
+ 0010  AC 14 00 02 18 DA 00 50  35 56 EB 17 33 57 22 7B   .......P 5V..3W"{
+ 0020  50 02 02 00 C5 4A 00 00                            P....J.. 
+ALERT CNT:           1
+ALERT MSG [00]:      BadHosts
+ALERT GID [00]:      1
+ALERT SID [00]:      1
+ALERT REV [00]:      0
+ALERT CLASS [00]:    Misc activity
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A
++================
+TIME:              04/08/2025-16:22:47.160160
+PKT SRC:           wire/pcap
+SRC IP:            172.20.1.3
+DST IP:            172.20.0.2
+PROTO:             6
+SRC PORT:          7142
+DST PORT:          80
+TCP SEQ:           2074933104
+TCP ACK:           866437472
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/08/2025-16:22:47.160160
+FLOW PKTS TODST:   1
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  40
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: FALSE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        40
+PACKET:
+ 0000  45 00 00 28 88 BE 00 00  3F 06 99 E4 AC 14 01 03   E..(.... ?.......
+ 0010  AC 14 00 02 1B E6 00 50  7B AC F7 70 33 A4 C9 60   .......P {..p3..`
+ 0020  50 02 02 00 C8 5C 00 00                            P....\.. 
+ALERT CNT:           1
+ALERT MSG [00]:      BadHosts
+ALERT GID [00]:      1
+ALERT SID [00]:      1
+ALERT REV [00]:      0
+ALERT CLASS [00]:    Misc activity
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A
++================
+TIME:              04/08/2025-16:42:30.362800
+PKT SRC:           wire/pcap
+SRC IP:            172.20.1.3
+DST IP:            172.20.0.2
+PROTO:             6
+SRC PORT:          7170
+DST PORT:          80
+TCP SEQ:           384230040
+TCP ACK:           783714188
+FLOW:              to_server: TRUE, to_client: FALSE
+FLOW Start TS:     04/08/2025-16:42:30.362800
+FLOW PKTS TODST:   1
+FLOW PKTS TOSRC:   0
+FLOW Total Bytes:  40
+FLOW IPONLY SET:   TOSERVER: TRUE, TOCLIENT: FALSE
+FLOW ACTION:       DROP: FALSE
+FLOW NOINSPECTION: PACKET: FALSE, PAYLOAD: FALSE, APP_LAYER: FALSE
+FLOW APP_LAYER:    DETECTED: FALSE, PROTO 0
+PACKET LEN:        40
+PACKET:
+ 0000  45 00 00 28 2A D2 00 00  3F 06 F7 D0 AC 14 01 03   E..(*... ?.......
+ 0010  AC 14 00 02 1C 02 00 50  16 E6 E2 98 2E B6 87 8C   .......P ........
+ 0020  50 02 02 00 88 A1 00 00                            P....... 
+ALERT CNT:           1
+ALERT MSG [00]:      BadHosts
+ALERT GID [00]:      1
+ALERT SID [00]:      1
+ALERT REV [00]:      0
+ALERT CLASS [00]:    Misc activity
+ALERT PRIO [00]:     3
+ALERT FOUND IN [00]: PACKET
+ALERT IN TX [00]:    N/A

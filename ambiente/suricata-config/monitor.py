@@ -22,7 +22,7 @@ class EventHandler(pyinotify.ProcessEvent):
 def update_reputation(ip):
     if not os.path.exists(reputation_file):
         with open(reputation_file, 'w') as f:
-            f.write(f"{ip},3,90\n")
+            f.write(f"{ip},3,117\n")
     else:
         with open(reputation_file, 'r+') as f:
             lines = f.readlines()
@@ -61,7 +61,7 @@ def update_reputation(ip):
                     lines[i] = f"{ip},{new_category},{new_reputation}\n"
                     break
             else:
-                lines.append(f"{ip},3,90\n")
+                lines.append(f"{ip},3,117\n")
             f.seek(0)
             f.writelines(lines)
     reload_suricata()

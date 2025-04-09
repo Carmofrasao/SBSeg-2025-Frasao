@@ -2,6 +2,12 @@
 
 Repositório para dados relativos ao XXV Simpósio Brasileiro de Cibersegurança
 
+A maquina host utilizada tem as seguinte especificações:
+
+* CPU: AMD EPYC 7401 24-Core 2.0GHz
+* RAM: 32 GB 
+* SO: Debian GNU/Linux 12 (bookworm)
+
 Para simular o sistema utilizado nesse estudo, foi utilizado o sistema de contêineres Docker.
 
 O sistema de reputação utilizado foi presente no Suricata (https://github.com/OISF/suricata) implementado em Docker (https://hub.docker.com/r/jasonish/suricata/).

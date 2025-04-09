@@ -27,7 +27,6 @@ services:
     container_name: suricata
     volumes:
       - ./suricata-config:/etc/suricata
-      - ./suricata-logs:/var/log/suricata
     command: ["/etc/suricata/entrypoint.sh"]
     privileged: true
     # IPS
@@ -47,7 +46,7 @@ services:
     image: debian:latest 
     container_name: client
     volumes:
-      - ./config:/home
+      - ./client-config:/home
     networks:
       rede_externa:
         ipv4_address: 172.20.1.3
@@ -57,7 +56,7 @@ services:
     image: debian:latest 
     container_name: attacker
     volumes:
-      - ./config:/home
+      - ./attacker-config:/home
     networks:
       rede_externa:
         ipv4_address: 172.20.1.4

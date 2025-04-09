@@ -6,7 +6,7 @@ networks:
 
 services:
   james:
-    image: apache/james:distributed-latest
+    image: apache/james:latest
     container_name: james
     hostname: james.local
     ports:
@@ -19,6 +19,7 @@ services:
       - "8000:8000" # WebAdmin
     volumes:
       - ./james/keystore:/root/conf/keystore
+      - ./james_logs:/var/log/james
     networks:
       - mailnet
 
@@ -52,4 +53,7 @@ services:
     tty: true
     networks:
       - mailnet
+
+volumes:
+  james_logs:
 

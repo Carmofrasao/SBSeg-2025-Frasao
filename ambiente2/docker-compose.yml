@@ -37,17 +37,17 @@ services:
     depends_on:
       - james
 
-  user1:
+  legit-client: 
     image: debian:latest
-    container_name: user1
+    container_name: client
     stdin_open: true
     tty: true
     networks:
       - mailnet
 
-  user2:
+  attacker:
     image: debian:latest
-    container_name: user2
+    container_name: attacker
     stdin_open: true
     tty: true
     networks:

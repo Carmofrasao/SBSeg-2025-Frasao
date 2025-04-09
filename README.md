@@ -22,7 +22,7 @@ Para simular as outras maquinas da rede, foi utilizado uma imagem Debian impleme
 
 * Todo o processo foi executado com a maquina principal (host) em modo root!
 
-No diretorio `SBSeg-2025-Frasao/ambiente#`, execute o comando:
+No diretorio `SBSeg-2025-Frasao/ambiente1`, execute o comando:
 
 ```bash
 docker-compose up

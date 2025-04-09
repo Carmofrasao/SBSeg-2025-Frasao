@@ -2,11 +2,13 @@
 
 Repositório para dados relativos ao XXV Simpósio Brasileiro de Cibersegurança
 
-A maquina host utilizada tem as seguinte especificações:
+## Maquina host utilizada
 
 * CPU: AMD EPYC 7401 24-Core 2.0GHz
 * RAM: 32 GB 
 * SO: Debian GNU/Linux 12 (bookworm)
+
+## Sistema utilizado
 
 Para simular o sistema utilizado nesse estudo, foi utilizado o sistema de contêineres Docker.
 
@@ -15,6 +17,32 @@ O sistema de reputação utilizado foi presente no Suricata (https://github.com/
 Para simular um servidor web, foi utilizado uma imagem Nginx implementado em Docker (https://hub.docker.com/_/nginx).
 
 Para simular as outras maquinas da rede, foi utilizado uma imagem Debian implementada em Docker (https://hub.docker.com/_/debian).
+
+## Taxa de pacotes
+
+| Categoria | Reputação | Taxa de passagem |
+| --------- | --------- | ---------------- |
+| GoodHosts |    127    |     100%         |
+| GoodHosts |    107    |     95%          |
+| GoodHosts |    87     |     90%          |
+| GoodHosts |    67     |     85%          |
+| GoodHosts |    47     |     80%          |
+| GoodHosts |    27     |     75%          |
+| GoodHosts |    7      |     70%          |
+| GreyHosts |    7      |     65%          |
+| GreyHosts |    27     |     60%          |
+| GreyHosts |    47     |     55%          |
+| GreyHosts |    67     |     50%          |
+| GreyHosts |    87     |     45%          |
+| GreyHosts |    107    |     40%          |
+| GreyHosts |    127    |     35%          |
+| BadHosts  |    7      |     30%          |
+| BadHosts  |    27     |     25%          |
+| BadHosts  |    47     |     20%          |
+| BadHosts  |    67     |     15%          |
+| BadHosts  |    87     |     10%          |
+| BadHosts  |    107    |     5%           |
+| BadHosts  |    127    |     0%           |
 
 ## Passo a passo para reproduzir o ataque
 

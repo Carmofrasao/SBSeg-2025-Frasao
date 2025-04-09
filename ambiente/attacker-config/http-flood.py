@@ -12,5 +12,6 @@ def attack():
         except:
             pass
 
+print("Iniciando ataque!")
 for _ in range(50):
     threading.Thread(target=attack).start()

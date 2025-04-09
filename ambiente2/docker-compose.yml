@@ -1,0 +1,55 @@
+version: '3.8'
+
+networks:
+  mailnet:
+    driver: bridge
+
+services:
+  james:
+    image: apache/james:distributed-latest
+    container_name: james
+    hostname: james.local
+    ports:
+      - "25:25"    # SMTP
+      - "110:110"  # POP3
+      - "143:143"  # IMAP
+      - "465:465"  # SMTPS
+      - "587:587"  # Submission
+      - "993:993"  # IMAPS
+      - "8000:8000" # WebAdmin
+    volumes:
+      - ./james/keystore:/root/conf/keystore
+    networks:
+      - mailnet
+
+  fail2ban:
+    image: lscr.io/linuxserver/fail2ban:latest
+    container_name: fail2ban
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    volumes:
+      - ./fail2ban/jail.d:/config/jail.d
+      - ./fail2ban/filter.d:/config/filter.d
+      - james_logs:/var/log/james:ro
+    networks:
+      - mailnet
+    depends_on:
+      - james
+
+  user1:
+    image: debian:latest
+    container_name: user1
+    stdin_open: true
+    tty: true
+    networks:
+      - mailnet
+
+  user2:
+    image: debian:latest
+    container_name: user2
+    stdin_open: true
+    tty: true
+    networks:
+      - mailnet
+

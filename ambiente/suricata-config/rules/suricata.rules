@@ -4,4 +4,5 @@ alert http any any -> any any (msg:"HTTP Flood Attack";http.method; content:"GET
 drop ip any any -> any any (msg:"Host mal intencionado detectado"; flow:to_server; iprep:src,BadHosts,>,107; sid:3;)
 
 drop ip any any -> any any (msg:"Essa regra deveria dropar 50% dos pacotes"; flow:to_server; lua: script.lua; noalert; sid:6;)
+#drop icmp any any -> any any (msg:"Essa regra deveria dropar 50% dos pacotes"; flow:to_server; lua: script.lua; noalert; sid:6;)
 

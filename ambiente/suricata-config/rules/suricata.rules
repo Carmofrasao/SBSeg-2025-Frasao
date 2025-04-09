@@ -3,5 +3,5 @@ alert tcp any any -> any any (msg:"SYN Flood Attack"; flags: S; threshold: type 
 alert http any any -> any any (msg:"HTTP Flood Attack";http.method; content:"GET";http.header; content:"X-Forwarded-For";threshold: type threshold, track by_src, count 100, seconds 10;classtype:web-application-attack;sid:2;)
 drop ip any any -> any any (msg:"Host mal intencionado detectado"; flow:to_server; iprep:src,BadHosts,>,107; sid:3;)
 
-drop ip any any -> any any (msg:"Essa regra deveria dropar 50% dos pacotes"; flow:to_server; lua: script.lua; sid:6;)
+drop ip any any -> any any (msg:"Essa regra deveria dropar 50% dos pacotes"; flow:to_server; lua: script.lua; noalert; sid:6;)
 

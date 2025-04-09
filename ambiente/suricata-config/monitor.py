@@ -4,7 +4,39 @@ import os
 import subprocess
 
 log_file = '/etc/suricata/eve.json'
+lua_script_file = '/etc/suricata/rules/script.lua'
 reputation_file = '/etc/suricata/iprep/reputation.list'
+
+reputation_dict = {
+  3: {
+    127: 1.00,
+    107: 0.95,
+    87: 0.90,
+    67: 0.85,
+    47: 0.80,
+    27: 0.75,
+    7: 0.70,
+  },
+  2: {
+    7: 0.65,
+    27: 0.60,
+    47: 0.55,
+    67: 0.50,
+    87: 0.45,
+    107: 0.40,
+    127: 0.35,
+  },
+  1: {
+    7: 0.30,
+    27: 0.25,
+    47: 0.20,
+    67: 0.15,
+    87: 0.10,
+    107: 0.05,
+    127: 0.00
+  }
+}
+
 
 class EventHandler(pyinotify.ProcessEvent):
     def process_IN_MODIFY(self, event):
@@ -18,7 +50,19 @@ class EventHandler(pyinotify.ProcessEvent):
                     if src_ip:
                         update_reputation(src_ip)
 
+
+def update_drop_probability(probability):
+    with open(lua_script_file, 'r+') as f:
+        lines = f.readlines()
+        lines[9] = f"\t\t\tif math.random() < {probability} then\n"
+        f.seek(0)
+        f.writelines(lines)
+        f.close()
+
+
 def update_reputation(ip):
+    new_category = 2
+    new_reputation = 7
     if not os.path.exists(reputation_file):
         with open(reputation_file, 'w') as f:
             f.write(f"{ip},2,7\n")
@@ -63,6 +107,7 @@ def update_reputation(ip):
                 lines.append(f"{ip},2,7\n")
             f.seek(0)
             f.writelines(lines)
+    update_drop_probability(reputation_dict[new_category][new_reputation])
     reload_suricata()
 
 def reload_suricata():

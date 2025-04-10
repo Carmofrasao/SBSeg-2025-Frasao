@@ -1,9 +1,0 @@
-2023-06-17 11:11:50.206 +0200 - org.apache.james.protocols.smtp.core.fastfail.AbstractValidRcptHandler [ip=45.129.14.30] - Rejected message. Unknown user: dar...@domaine.de
-2023-06-17 11:11:51.206 +0200 - org.apache.james.protocols.smtp.core.fastfail.AbstractValidRcptHandler [ip=45.129.14.31] - Rejected message. Unknown user: dar...@domaine.de
-2023-06-17 11:11:50.206 +0200 - org.apache.james.protocols.smtp.core.esmtp.AuthCmdHandler [ip=] - AUTH method LOGIN failed from Username{localPart=monitor, domainPart=Optional[Domain :domaine.de]}@45.129.14.40
-2023-06-17 11:11:50.206 +0200 - org.apache.james.protocols.smtp.core.esmtp.AuthCmdHandler [ip=] - AUTH method LOGIN failed from Username{localPart=monitor, domainPart=Optional[Domain :domaine.de]}@45.129.14.41
-2023-06-17 11:11:52.206 +0200 - org.apache.james.protocols.smtp.core.fastfail.AbstractValidRcptHandler [ip=45.129.14.30] - Rejected message. Unknown user: dar...@domaine.de
-2023-06-17 11:11:53.206 +0200 - org.apache.james.protocols.smtp.core.fastfail.AbstractValidRcptHandler [ip=45.129.14.31] - Rejected message. Unknown user: dar...@domaine.de
-2023-06-17 11:11:50.206 +0200 - org.apache.james.protocols.smtp.core.esmtp.AuthCmdHandler [ip=] - AUTH method LOGIN failed from Username{localPart=monitor, domainPart=Optional[Domain :domaine.de]}@45.129.14.40
-2023-06-17 11:11:50.206 +0200 - org.apache.james.protocols.smtp.core.esmtp.AuthCmdHandler [ip=] - AUTH method LOGIN failed from Username{localPart=monitor, domainPart=Optional[Domain :domaine.de]}@45.129.14.41
-

@@ -39,6 +39,8 @@ services:
       #  ipv4_address: 172.20.0.2
       rede_interna:
         ipv4_address: 172.20.0.2
+    expose:
+      - "25"
 
   fail2ban:
     image: lscr.io/linuxserver/fail2ban:latest
@@ -59,6 +61,8 @@ services:
         ipv4_address: 172.20.1.2
     depends_on:
       - james
+    ports:
+      - "25:25"
 
   legit-client: 
     image: debian:latest

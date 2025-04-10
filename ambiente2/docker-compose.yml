@@ -23,7 +23,7 @@ services:
     volumes:
       - ./james/conf:/root/conf
       - ./james/home:/home
-      - ./james_logs:/var/log/james
+      - ./james_logs:/opt/james/log
     networks:
       mailnet:
         ipv4_address: 172.20.0.2
@@ -36,8 +36,8 @@ services:
       - NET_RAW
     volumes:
       - ./fail2ban/:/config/fail2ban/
-      #- ./fail2ban/jail.local:/etc/fail2ban/jail.local
-      - james_logs:/var/log/james:ro
+      - ./fail2ban/opt/log4j2.xml:/opt/james/conf/log4j2.xml
+      - james_logs:/opt/james/log
     networks:
       mailnet:
         ipv4_address: 172.20.0.3

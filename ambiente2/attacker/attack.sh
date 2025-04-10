@@ -1,7 +1,7 @@
 swaks --to test@james.local \
-      --from client@localhost.com \
+      --from client@localhost \
       --server james.local \
       --auth LOGIN \
-      --auth-user client@localhost.com \
+      --auth-user client@localhost \
       --auth-password senha \
       --quit-after AUTH

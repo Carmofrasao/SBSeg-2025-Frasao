@@ -1,0 +1,1 @@
+2025-04-10 23:43:43,682 [smtpserver-executor-10] ERROR o.a.j.p.api.handler.CommandHandler - AUTH method LOGIN failed from Username{localPart=client, domainPart=Optional[Domain : localhost]}@172.20.0.5

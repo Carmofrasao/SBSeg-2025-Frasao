@@ -1,1 +1,7 @@
-swaks --to test@james.local --server james.local --port 25 --auth LOGIN --auth-user client@localhost.com --auth-password senha
+swaks --to test@james.local \
+      --from client@localhost.com \
+      --server james.local \
+      --auth LOGIN \
+      --auth-user client@localhost.com \
+      --auth-password senha \
+      --quit-after AUTH

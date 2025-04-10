@@ -18,7 +18,7 @@ services:
       - "993:993"  # IMAPS
       - "8000:8000" # WebAdmin
     volumes:
-      - ./james/keystore:/root/conf/keystore
+      - ./james:/root/conf
       - ./james_logs:/var/log/james
     networks:
       - mailnet
@@ -41,6 +41,8 @@ services:
   legit-client: 
     image: debian:latest
     container_name: client
+    volumes:
+      - ./client:/etc
     stdin_open: true
     tty: true
     networks:
@@ -49,6 +51,8 @@ services:
   attacker:
     image: debian:latest
     container_name: attacker
+    volumes:
+      - ./attacker:/etc
     stdin_open: true
     tty: true
     networks:

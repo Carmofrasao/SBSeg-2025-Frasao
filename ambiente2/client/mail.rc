@@ -1,0 +1,5 @@
+set smtp=james.local
+set smtp-auth=login
+set smtp-auth-user=client
+set smtp-auth-password=123mudar
+set from=client@localhost.com

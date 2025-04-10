@@ -1,0 +1,8 @@
+<domainlist class="org.apache.james.domainlist.xml.XMLDomainList">
+    <autodetect>false</autodetect>
+    <autodetectIP>false</autodetectIP>
+    <domainnames>
+        <domainname>localhost.com</domainname>
+    </domainnames>
+</domainlist>
+

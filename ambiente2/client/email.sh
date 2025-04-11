@@ -3,5 +3,4 @@ swaks --to test@james.local \
       --server james.local \
       --auth LOGIN \
       --auth-user client@localhost.com \
-      --auth-password senha \
-      --quit-after AUTH
+      --auth-password 123mudar

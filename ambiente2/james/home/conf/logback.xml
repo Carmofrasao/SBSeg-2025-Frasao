@@ -20,32 +20,17 @@
 
 <configuration>
 
-        <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
-                <resetJUL>true</resetJUL>
-        </contextListener>
-
         <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
                 <encoder>
                         <pattern>%d{HH:mm:ss.SSS} %highlight([%-5level]) %logger{15} - %msg%n%rEx</pattern>
-                        <immediateFlush>false</immediateFlush>
                 </encoder>
         </appender>
 
-        <appender name="LOG_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <appender name="LOG_FILE" class="ch.qos.logback.core.FileAppender">
                 <file>/var/log/james/james.log</file>
-                <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-                    <fileNamePattern>/var/log/james/james.%i.log.tar.gz</fileNamePattern>
-                    <minIndex>1</minIndex>
-                    <maxIndex>3</maxIndex>
-                </rollingPolicy>
-
-                <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
-                    <maxFileSize>100MB</maxFileSize>
-                </triggeringPolicy>
-
+                <append>true</append>
                 <encoder>
                         <pattern>%d{HH:mm:ss.SSS} [%-5level] %logger{15} - %msg%n%rEx</pattern>
-                        <immediateFlush>false</immediateFlush>
                 </encoder>
         </appender>
 

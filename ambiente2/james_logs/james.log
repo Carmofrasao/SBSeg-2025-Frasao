@@ -2,3 +2,4 @@
 2025-04-10 23:46:10,173 [smtpserver-executor-26] ERROR o.a.j.p.api.handler.CommandHandler - AUTH method LOGIN failed from Username{localPart=client, domainPart=Optional[Domain : localhost]}@172.20.0.5
 2025-04-10 23:46:18,745 [smtpserver-executor-26] ERROR o.a.j.p.api.handler.CommandHandler - AUTH method LOGIN failed from Username{localPart=client, domainPart=Optional[Domain : localhost]}@172.20.0.5
 2025-04-10 23:46:29,924 [smtpserver-executor-17] ERROR o.a.j.p.api.handler.CommandHandler - AUTH method LOGIN failed from Username{localPart=client, domainPart=Optional[Domain : localhost]}@172.20.0.5
+05:38:50.934 [ERROR] o.a.j.p.a.h.CommandHandler - AUTH method LOGIN failed from Username{localPart=client, domainPart=Optional[Domain : localhost.com]}@172.20.0.5

@@ -6,11 +6,12 @@ Repositório para dados relativos ao XXV Simpósio Brasileiro de Cibersegurança
 
 * CPU: AMD EPYC 7401 24-Core 2.0GHz
 * RAM: 32 GB 
+* Kernel: 6.12.13
 * SO: Debian GNU/Linux 12 (bookworm)
 
-## Sistema utilizado (Ambiente 1)
+## Sistema utilizado para reproduzir o ataque
 
-Para simular o sistema utilizado nesse estudo, foi utilizado o sistema de contêineres Docker.
+Para simular o sistema utilizado nesse estudo, foi utilizado o sistema de contêineres Docker, versão 20.10.24.
 
 O sistema de reputação utilizado foi presente no Suricata (https://github.com/OISF/suricata) implementado em Docker (https://hub.docker.com/r/jasonish/suricata/).
 
@@ -18,7 +19,7 @@ Para simular um servidor web, foi utilizado uma imagem Nginx implementado em Doc
 
 Para simular as outras maquinas da rede, foi utilizado uma imagem Debian implementada em Docker (https://hub.docker.com/_/debian).
 
-## Passo a passo para reproduzir o ataque (Ambiente 1)
+## Passo a passo para reproduzir o ataque
 
 * Todo o processo foi executado com a maquina principal (host) em modo root!
 
@@ -83,23 +84,3 @@ wget -qO- 172.20.1.2
 `-a`: Endereço de spoof.
 
 Provalvelmente será necessario executar o `hping3` umas 40 vezes (na configuração atual do suricata.rules e monitor.py) até que o client seja bloqueado.
-
-## Sistema utilizado (Ambiente 1)
-
-
-
-## Passo a passo para reproduzir o ataque (Ambiente 1)
-
-
-
-### Maquina fail2ban
-
-
-
-### Maquina client
-
-
-
-### Maquina attacker 
-
-

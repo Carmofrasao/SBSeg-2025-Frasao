@@ -1,6 +1,0 @@
-<usersRepository>
-    <usersrepository class="org.apache.james.user.jpa.JPAUsersRepository">
-        <enableVirtualHosting>true</enableVirtualHosting>
-        <algorithm>SHA-512</algorithm>
-    </usersrepository>
-</usersRepository>

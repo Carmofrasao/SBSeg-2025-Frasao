@@ -7,15 +7,11 @@ end
 function match(args)
     a = tostring(args["packet"])
     if #a > 0 then
-			if math.random() < 0.35 then
-          return 1
+	    if math.random() < 1.00 then
+          	return 1
         end
     end
 
     return 0
 end
-
-return 0
-
-
 

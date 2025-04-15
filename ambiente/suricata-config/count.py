@@ -75,4 +75,4 @@ if __name__ == "__main__":
     else:
         selected_interface = "eth0"  # Padrão
     
-    count_packets(interface=selected_interface, interval=10, total_duration=400)
+    count_packets(interface=selected_interface, interval=10, total_duration=450)

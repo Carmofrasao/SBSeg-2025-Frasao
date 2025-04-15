@@ -18,23 +18,57 @@ HPING 172.20.1.2 (eth0 172.20.1.2): S set, 40 headers + 0 data bytes
 HPING 172.20.1.2 (eth0 172.20.1.2): S set, 40 headers + 0 data bytes
 HPING 172.20.1.2 (eth0 172.20.1.2): S set, 40 headers + 0 data bytes
 HPING 172.20.1.2 (eth0 172.20.1.2): S set, 40 headers + 0 data bytes
-Tempo: 31.65s
-Tempo: 41.63s
-Tempo: 51.64s
-Tempo: 61.66s
-Tempo: 71.64s
-Tempo: 81.63s
-Tempo: 91.62s
-Tempo: 101.62s
-Tempo: 111.62s
-Tempo: 121.62s
-Tempo: 131.63s
-Tempo: 141.61s
-Tempo: 151.64s
-Tempo: 161.63s
-Tempo: 171.61s
-Tempo: 181.62s
-Tempo: 191.63s
-Tempo: 201.63s
-Tempo: 211.64s
-Tempo: 221.64s
+HPING 172.20.1.2 (eth0 172.20.1.2): S set, 40 headers + 0 data bytes
+HPING 172.20.1.2 (eth0 172.20.1.2): S set, 40 headers + 0 data bytes
+HPING 172.20.1.2 (eth0 172.20.1.2): S set, 40 headers + 0 data bytes
+HPING 172.20.1.2 (eth0 172.20.1.2): S set, 40 headers + 0 data bytes
+HPING 172.20.1.2 (eth0 172.20.1.2): S set, 40 headers + 0 data bytes
+HPING 172.20.1.2 (eth0 172.20.1.2): S set, 40 headers + 0 data bytes
+HPING 172.20.1.2 (eth0 172.20.1.2): S set, 40 headers + 0 data bytes
+HPING 172.20.1.2 (eth0 172.20.1.2): S set, 40 headers + 0 data bytes
+HPING 172.20.1.2 (eth0 172.20.1.2): S set, 40 headers + 0 data bytes
+HPING 172.20.1.2 (eth0 172.20.1.2): S set, 40 headers + 0 data bytes
+HPING 172.20.1.2 (eth0 172.20.1.2): S set, 40 headers + 0 data bytes
+HPING 172.20.1.2 (eth0 172.20.1.2): S set, 40 headers + 0 data bytes
+HPING 172.20.1.2 (eth0 172.20.1.2): S set, 40 headers + 0 data bytes
+HPING 172.20.1.2 (eth0 172.20.1.2): S set, 40 headers + 0 data bytes
+HPING 172.20.1.2 (eth0 172.20.1.2): S set, 40 headers + 0 data bytes
+HPING 172.20.1.2 (eth0 172.20.1.2): S set, 40 headers + 0 data bytes
+HPING 172.20.1.2 (eth0 172.20.1.2): S set, 40 headers + 0 data bytes
+Tempo: 33.11s
+Tempo: 43.10s
+Tempo: 53.09s
+Tempo: 63.10s
+Tempo: 73.09s
+Tempo: 83.10s
+Tempo: 93.09s
+Tempo: 103.10s
+Tempo: 113.08s
+Tempo: 123.11s
+Tempo: 133.10s
+Tempo: 143.11s
+Tempo: 153.11s
+Tempo: 163.09s
+Tempo: 173.08s
+Tempo: 183.09s
+Tempo: 193.11s
+Tempo: 203.08s
+Tempo: 213.09s
+Tempo: 223.11s
+Tempo: 233.11s
+Tempo: 243.08s
+Tempo: 253.09s
+Tempo: 263.10s
+Tempo: 273.07s
+Tempo: 283.12s
+Tempo: 293.07s
+Tempo: 303.07s
+Tempo: 313.12s
+Tempo: 323.12s
+Tempo: 333.10s
+Tempo: 343.10s
+Tempo: 353.10s
+Tempo: 363.10s
+Tempo: 373.08s
+Tempo: 383.11s
+Tempo: 393.12s

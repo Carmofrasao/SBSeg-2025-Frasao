@@ -18,31 +18,23 @@ HPING 172.20.1.2 (eth0 172.20.1.2): S set, 40 headers + 0 data bytes
 HPING 172.20.1.2 (eth0 172.20.1.2): S set, 40 headers + 0 data bytes
 HPING 172.20.1.2 (eth0 172.20.1.2): S set, 40 headers + 0 data bytes
 HPING 172.20.1.2 (eth0 172.20.1.2): S set, 40 headers + 0 data bytes
-HPING 172.20.1.2 (eth0 172.20.1.2): S set, 40 headers + 0 data bytes
-HPING 172.20.1.2 (eth0 172.20.1.2): S set, 40 headers + 0 data bytes
-HPING 172.20.1.2 (eth0 172.20.1.2): S set, 40 headers + 0 data bytes
-HPING 172.20.1.2 (eth0 172.20.1.2): S set, 40 headers + 0 data bytes
-Tempo: 31.90s
-Tempo: 41.89s
-Tempo: 51.90s
-Tempo: 61.91s
-Tempo: 71.86s
-Tempo: 81.90s
-Tempo: 91.90s
-Tempo: 101.95s
-Tempo: 111.93s
-Tempo: 121.95s
-Tempo: 132.18s
-Tempo: 140.92s
-Tempo: 151.93s
-Tempo: 161.90s
-Tempo: 171.91s
-Tempo: 181.93s
-Tempo: 191.91s
-Tempo: 201.91s
-Tempo: 211.92s
-Tempo: 221.93s
-Tempo: 231.93s
-Tempo: 241.92s
-Tempo: 251.91s
-Tempo: 261.92s
+Tempo: 31.65s
+Tempo: 41.63s
+Tempo: 51.64s
+Tempo: 61.66s
+Tempo: 71.64s
+Tempo: 81.63s
+Tempo: 91.62s
+Tempo: 101.62s
+Tempo: 111.62s
+Tempo: 121.62s
+Tempo: 131.63s
+Tempo: 141.61s
+Tempo: 151.64s
+Tempo: 161.63s
+Tempo: 171.61s
+Tempo: 181.62s
+Tempo: 191.63s
+Tempo: 201.63s
+Tempo: 211.64s
+Tempo: 221.64s

@@ -7,7 +7,7 @@ rtt = 0
 
 for j in range(40):
   ss = []
-  for i in range(5):
+  for i in range(11):
     ans = None
     start = time.time()
     try:

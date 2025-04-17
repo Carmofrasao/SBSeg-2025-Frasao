@@ -27,7 +27,8 @@ def count_packets(interface="eth0", interval=10, total_duration=300):
             "-w", "-",              # Não salva em arquivo
             "-q",                   # Modo quiet
             "-G", str(interval),    # Duração do intervalo
-            "-W", "1"               # Apenas uma execução
+            "-W", "1",              # Apenas uma execução
+            "tcp[13] == 2 and ip and dst 172.20.0.2 and ether src 02:42:ac:14:00:03"
         ]
         
         print(f"\nIntervalo {i+1}/{num_intervals} - Tempo: {start_time}")
@@ -50,7 +51,7 @@ def count_packets(interface="eth0", interval=10, total_duration=300):
             print(f"Erro durante a captura: {e}")
             break
         
-        time.sleep(0.1)
+        #time.sleep(0.1)
     
     print("\nMonitoramento finalizado.")
 

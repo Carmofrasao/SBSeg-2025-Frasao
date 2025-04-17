@@ -16,6 +16,8 @@ services:
   web-server:
     image: nginx:latest
     container_name: server
+    volumes:
+      - ./server-config:/home
     networks:
       rede_interna:
         ipv4_address: 172.20.0.2

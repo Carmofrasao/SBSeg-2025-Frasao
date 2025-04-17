@@ -1,0 +1,98 @@
+Tempo: 0.00s
+Pacotes capturados: 21
+
+Tempo: 13.37s
+Pacotes capturados: 10
+
+Tempo: 23.71s
+Pacotes capturados: 16
+
+Tempo: 35.03s
+Pacotes capturados: 9
+
+Tempo: 45.34s
+Pacotes capturados: 17
+
+Tempo: 59.76s
+Pacotes capturados: 12
+
+Tempo: 71.09s
+Pacotes capturados: 6
+
+Tempo: 80.35s
+Pacotes capturados: 13
+
+Tempo: 91.71s
+Pacotes capturados: 7
+
+Tempo: 102.01s
+Pacotes capturados: 8
+
+Tempo: 113.32s
+Pacotes capturados: 10
+
+Tempo: 123.64s
+Pacotes capturados: 6
+
+Tempo: 134.94s
+Pacotes capturados: 9
+
+Tempo: 146.26s
+Pacotes capturados: 3
+
+Tempo: 155.53s
+Pacotes capturados: 7
+
+Tempo: 165.84s
+Pacotes capturados: 8
+
+Tempo: 176.14s
+Pacotes capturados: 6
+
+Tempo: 186.43s
+Pacotes capturados: 6
+
+Tempo: 197.76s
+Pacotes capturados: 7
+
+Tempo: 208.07s
+Pacotes capturados: 6
+
+Tempo: 218.36s
+Pacotes capturados: 6
+
+Tempo: 228.71s
+Pacotes capturados: 6
+
+Tempo: 240.03s
+Pacotes capturados: 5
+
+Tempo: 250.34s
+Pacotes capturados: 6
+
+Tempo: 260.64s
+Pacotes capturados: 5
+
+Tempo: 270.94s
+Pacotes capturados: 7
+
+Tempo: 281.26s
+Pacotes capturados: 5
+
+Tempo: 291.54s
+Pacotes capturados: 11
+
+Tempo: 302.86s
+Pacotes capturados: 14
+
+Tempo: 314.19s
+Pacotes capturados: 8
+
+Tempo: 324.47s
+Pacotes capturados: 5
+
+Tempo: 334.75s
+Pacotes capturados: 7
+
+Tempo: 344.85s
+Pacotes capturados: 8

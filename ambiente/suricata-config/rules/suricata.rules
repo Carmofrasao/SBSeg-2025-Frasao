@@ -1,7 +1,8 @@
+# Alertar SYN Flood
 alert tcp any any -> any any (msg:"SYN Flood Attack"; flags: S; threshold: type both, track by_dst, count 100, seconds 5; classtype:misc-activity; sid:1;)
-drop ip any any -> any any (msg:"Host mal intencionado detectado"; flow:to_server; iprep:src,BadHosts,>=,107; sid:3;)
 
-drop ip 172.20.1.3 any -> any any (msg:"Essa regra deveria dropar 50% dos pacotes"; flow:to_server; lua: script.lua; noalert; sid:6;)
-#drop icmp any any -> any any (msg:"PING"; flow:to_server; lua: script.lua; noalert; sid:6;)
-#drop ip any any -> any any (msg:"PING"; sid:6;)
+# Dropar parcialmente os pacotes de acordo com a reputação do IP de origem
+drop ip 172.20.1.3 any -> any any (msg:"Drop parcial"; flow:to_server; lua: script.lua; noalert; sid:6;)
 
+# Dropar todos os pacotes
+drop ip any any -> any any (msg:"Dropar todos os pacotes de IP com baixa reputação"; flow:to_server; iprep:src,BadHosts,>,107; sid:3;)

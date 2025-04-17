@@ -45,4 +45,4 @@ security:
 
 vars:
   address-groups:
-    HOME_NET: "file:/etc/suricata/home_net_ips.txt"
+    HOME_NET: "[]"

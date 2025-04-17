@@ -1,4 +1,5 @@
 import pyinotify
+import ast
 import json
 import os
 import subprocess
@@ -6,8 +7,7 @@ import subprocess
 log_file = '/etc/suricata/eve.json'
 lua_script_file = '/etc/suricata/rules/script.lua'
 reputation_file = '/etc/suricata/iprep/reputation.list'
-rules = "/etc/suricata/rules/suricata.rules"
-ips = "/etc/suricata/home_net_ips.txt"
+ips = "/etc/suricata/suricata.yaml"
 
 reputation_dict = {
   3: {
@@ -53,25 +53,43 @@ class EventHandler(pyinotify.ProcessEvent):
                         update_reputation(src_ip)
 
 def update_ips_file(ip):
-    with open(ips, 'r+') as f:
-        lines = f.read().strip()
+  # Lê todas as linhas do arquivo
+  with open(ips, "r") as f:
+      linhas = f.readlines()
 
-    ips = linha.split("/") if linha else []
+  # Procura a linha que define HOME_NET
+  for i in range(len(linhas)):
+      linha = linhas[i]
+      if "HOME_NET:" in linha:
+          # Extrai a string entre aspas
+          inicio = linha.find('"')
+          fim = linha.rfind('"')
+          conteudo_str = linha[inicio+1:fim]
 
-    # Verifica e adiciona se não estiver
-    if ipk not in ips:
-        ips.append(ipk)
+          # Remove espaços extras de IPs (segurança extra)
+          ipn = [ipl.strip() for ipl in conteudo_str[1:-1].split(",") if ipl.strip()]
 
-        # Escreve de volta no arquivo
-        with open(arquivo, "w") as f:
-            f.write("/".join(ips))
+          # Adiciona se não estiver
+          if ip not in ipn:
+              ipn.append(ip)
+
+          # Gera a nova string no formato desejado (sem aspas nos IPs)
+          nova_str = '[{}]'.format(','.join(ipn))
+
+          # Atualiza a linha
+          linhas[i] = f'    HOME_NET: "{nova_str}"\n'
+          break
+
+  # Escreve o arquivo de volta
+  with open(ips, "w") as f:
+      f.writelines(linhas)
 
 # Atualizando provavilidade do suricata dropar um pacote ou não, 
 # de acordo com a reputação do IP de origem
 def update_drop_probability(probability):
     with open(lua_script_file, 'r+') as f:
         lines = f.readlines()
-        lines[6] = f"\t\t\tif math.random() < {probability} then\n"
+        lines[9] = f"\t\t\tif math.random() < {probability} then\n"
         f.seek(0)
         f.writelines(lines)
         f.close()

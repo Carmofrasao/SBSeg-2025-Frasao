@@ -18,8 +18,4 @@ Tempo: 147.70s	RTT: 3003.37ms
 Tempo: 183.89s	RTT: 4454.80ms
 Tempo: 226.35s	RTT: 5351.36ms
 Tempo: 295.54s	RTT: 9170.22ms
-Tempo: 301.03s	RTT: 69.66ms
-Tempo: 306.46s	RTT: 61.64ms
-Tempo: 311.92s	RTT: 65.67ms
-Tempo: 317.33s	RTT: 58.79ms
 Tempo: 338.57s	RTT: 16243.64ms

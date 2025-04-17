@@ -8,7 +8,7 @@ Tempo: 24.68s
 Pacotes capturados: 96
 
 Tempo: 33.94s
-Pacotes capturados: 21
+Pacotes capturados: 90
 
 Tempo: 45.26s
 Pacotes capturados: 98
@@ -35,7 +35,7 @@ Tempo: 129.58s
 Pacotes capturados: 74
 
 Tempo: 139.86s
-Pacotes capturados: 3
+Pacotes capturados: 62
 
 Tempo: 150.14s
 Pacotes capturados: 53
@@ -74,7 +74,7 @@ Tempo: 294.10s
 Pacotes capturados: 30
 
 Tempo: 307.47s
-Pacotes capturados: 107
+Pacotes capturados: 12
 
 Tempo: 319.81s
 Pacotes capturados: 0

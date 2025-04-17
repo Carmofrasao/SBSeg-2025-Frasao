@@ -6,6 +6,7 @@ port = 80
 now = time.perf_counter() 
 rtt = 0
 
+# Envia 40 fluxos de pacotes (cada fluxo com 7 pacotes) simulando a interação do cliente com o servidor web
 for j in range(40):
   ss = []
   for i in range(7):
@@ -22,10 +23,10 @@ for j in range(40):
         sys.stdout.write(f'Tempo: {(time.perf_counter()-now):.2f}s\t')
         sys.stdout.write(f"RTT: {numpy.mean(ss):.2f}ms\n")
         exit(0)
-      
+
     rtt = (time.time() - start) * 1000  # em ms
     ss.append(rtt)
-  
+
   if ss:
     sys.stdout.write(f'Tempo: {(time.perf_counter()-now):.2f}s\t')
     sys.stdout.write(f"RTT: {numpy.mean(ss):.2f}ms\n")

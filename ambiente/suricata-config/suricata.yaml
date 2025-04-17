@@ -8,7 +8,6 @@ nfq:
   repeat-mask: 1
   queue-num: 0
 
-
 reputation-categories-file: /etc/suricata/iprep/categories.txt 
 
 default-reputation-path: /etc/suricata/iprep
@@ -23,10 +22,6 @@ unix-command:
   enabled: yes
 
 outputs:
-  #- lua:
-  #    enabled: yes
-  #    scripts-dir: /etc/suricata
-  #    scripts: script.lua
   - fast:
       enabled: yes
       filename: /var/log/suricata/fast.log
@@ -48,3 +43,6 @@ security:
     allow-rules: true
     allow-restricted-function: true
 
+vars:
+  address-groups:
+    HOME_NET: "file:/etc/suricata/home_net_ips.txt"

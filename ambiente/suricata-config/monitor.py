@@ -7,6 +7,7 @@ log_file = '/etc/suricata/eve.json'
 lua_script_file = '/etc/suricata/rules/script.lua'
 reputation_file = '/etc/suricata/iprep/reputation.list'
 rules = "/etc/suricata/rules/suricata.rules"
+ips = "/etc/suricata/home_net_ips.txt"
 
 reputation_dict = {
   3: {
@@ -38,6 +39,7 @@ reputation_dict = {
   }
 }
 
+# Monitorando atualização do arquivo eve.json (onde o suricata grava os logs)
 class EventHandler(pyinotify.ProcessEvent):
     def process_IN_MODIFY(self, event):
         if event.pathname == log_file:
@@ -50,14 +52,22 @@ class EventHandler(pyinotify.ProcessEvent):
                     if src_ip:
                         update_reputation(src_ip)
 
-def block_rule():
-    with open(rules, 'r+') as r:
-        lines = r.readlines()
-        lines[4] = f'#drop ip 172.20.1.3 any -> any any (msg:"Drop parcial"; flow:to_server; lua: script.lua; noalert; sid:6;)\n'
-        r.seek(0)
-        r.writelines(lines)
-        r.close()
+def update_ips_file(ip):
+    with open(ips, 'r+') as f:
+        lines = f.read().strip()
 
+    ips = linha.split("/") if linha else []
+
+    # Verifica e adiciona se não estiver
+    if ipk not in ips:
+        ips.append(ipk)
+
+        # Escreve de volta no arquivo
+        with open(arquivo, "w") as f:
+            f.write("/".join(ips))
+
+# Atualizando provavilidade do suricata dropar um pacote ou não, 
+# de acordo com a reputação do IP de origem
 def update_drop_probability(probability):
     with open(lua_script_file, 'r+') as f:
         lines = f.readlines()
@@ -66,6 +76,7 @@ def update_drop_probability(probability):
         f.writelines(lines)
         f.close()
 
+# Atualizando reputação de IPs que tiveram interações mal intencionadas com o Suricata
 def update_reputation(ip):
     new_category = 2
     new_reputation = 7
@@ -114,8 +125,7 @@ def update_reputation(ip):
             f.seek(0)
             f.writelines(lines)
     update_drop_probability(reputation_dict[new_category][new_reputation])
-    if new_reputation == 107 and new_category == 1:
-      block_rule()
+    update_ips_file(ip)
     reload_suricata()
 
 def reload_suricata():

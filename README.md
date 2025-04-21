@@ -6,18 +6,18 @@ Esse artefato tem como objetivo demonstrar a viabilidade em reproduzir o o ataqu
 
 ## Estrutura do README.md
 
-* [Título projeto](# Cordeiro em Pele de Lobo: Desvelando a Negação de Serviço Baseada em Envenenamento de Reputação)
-* [Estrutura do readme.md](## Estrutura do README.md)
-  * [### Estrutura do Repositório](### Estrutura do Repositório)
-* [Selos Considerados](Selos Considerados)
-* [Informações básicas](Informações básicas)
-* [Dependências](Dependências)
-* [Preocupações com segurança](Preocupações com segurança)
-* [Instalação](Instalação)
-* [Teste mínimo](Teste mínimo)
-* [Experimentos](Experimentos)
-  * [Reivindicação #1](Reivindicações #1)
-* [LICENSE](LICENSE)
+* [Título projeto](#cordeiro-em-pele-de-lobo-desvelando-a-negação-de-serviço-baseada-em-envenenamento-de-reputação)
+* [Estrutura do readme.md](#estrutura-do-readmemd)
+  * [Estrutura do Repositório](#estrutura-do-repositório)
+* [Selos Considerados](#selos-considerados)
+* [Informações básicas](#informações-básicas)
+* [Dependências](#dependências)
+* [Preocupações com segurança](#preocupações-com-segurança)
+* [Instalação](#instalação)
+* [Teste mínimo](#teste-mínimo)
+* [Experimentos](#experimentos)
+  * [Reivindicação #1](#reivindicações-#1)
+* [LICENSE](#licence)
 
 ### Estrutura do Repositório
 

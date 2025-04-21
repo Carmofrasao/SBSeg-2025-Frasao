@@ -1,8 +1,47 @@
-# SBSeg 2025
+# Cordeiro em Pele de Lobo: Desvelando a Negação de Serviço Baseada em Envenenamento de Reputação
 
-Repositório para dados relativos ao XXV Simpósio Brasileiro de Cibersegurança
+Resumo. Sistemas de reputação são utilizados para medir a confiabilidade de usuários, dispositivos e serviços em ambientes digitais. Apesar de seu auxílio na segurança e tomada de decisão, identificando interações maliciosas, esses sistemas estão sujeitos a manipulações que podem comprometer sua integridade. Esse trabalho propõe e valida um novo vetor de ataque que explora sistemas de reputação para realizar negação de serviço contra usuários legítimos. O ataque consiste em um agente malicioso que se passa pela vítima, executa ações ofensivas e induz sistemas automatizados a penalizá-la com base em sua reputação. A estratégia explora falhas na verificação de identidade em mecanismos de confiança baseados em comportamento. Para demonstrar essa estratégia, um experimento foi conduzido em ambiente Docker com Nginx e Suricata para simular e observar o impacto da personificação e deterioração de credibilidade. Partindo desse ambiente, o atacante, uma máquina integrada a mesma rede, utilizando a ferramenta hping3, em apenas 3 minutos conseguiu fazer o bloqueio do usuário legítima, utilizando um ataque SYN-flood com personificação sobre o usuário legítimo. Demonstrando a viabilidade do ataque e a necessidade de contramedidas para mitigar esse tipo de ameaça.
 
-## Estrutura do Repositório
+Esse artefato tem como objetivo demonstrar a viabilidade em reproduzir o o ataque de negação de serviço a partir da deterioração de reputação.
+
+## Estrutura do README.md
+
+* [Título projeto](# Cordeiro em Pele de Lobo: Desvelando a Negação de Serviço Baseada em Envenenamento de Reputação)
+* [Estrutura do readme.md](## Estrutura do README.md)
+  * [### Estrutura do Repositório](### Estrutura do Repositório)
+* [Selos Considerados](Selos Considerados)
+* [Informações básicas](Informações básicas)
+* [Dependências](Dependências)
+* [Preocupações com segurança](Preocupações com segurança)
+* [Instalação](Instalação)
+* [Teste mínimo](Teste mínimo)
+* [Experimentos](Experimentos)
+  * [Reivindicação #1](Reivindicações #1)
+* [LICENSE](LICENSE)
+
+### Estrutura do Repositório
+
+* ambiente
+Contém todos os arquivos de configuração para os testes.
+  * attacker-config/
+    - Arquivo de configuração do atacante;
+    - Arquivos usados para a execução do ataque;
+    - Arquivo para coletar metricas de resultado;
+    - Arquivo de resultados.
+  * client-config/
+    - Arquivo de configuração do cliente;
+    - Arquivos para coletar metricas de resultado;
+    - Arquivos de resultados.
+  * suricata-config/
+    * iprep/
+      - Arquivos para a configuração de reputação do Suricata. 
+    * rules/
+      - Arquivos para a configuração de regras do Suricata.
+    - Arquivos de configuração do Suricata; 
+    - Arquivos para coletar metricas de resultado;
+    - Arquivos de resultados.
+  * docker-compose.yml
+    - Arquivo de configuração do ambiente.
 
 ```bash
 ├── ambiente

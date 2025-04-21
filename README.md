@@ -21,9 +21,8 @@ Esse artefato tem como objetivo demonstrar a viabilidade em reproduzir o o ataqu
 
 ### Estrutura do Repositório
 
-* ambiente
-
-Contém todos os arquivos de configuração para os testes.
+* ambiente/
+  - Contém todos os arquivos de configuração para os testes.
   * attacker-config/
     - Arquivo de configuração do atacante;
     - Arquivos usados para a execução do ataque;

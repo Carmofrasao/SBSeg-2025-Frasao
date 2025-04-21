@@ -4,6 +4,7 @@ Repositório para dados relativos ao XXV Simpósio Brasileiro de Cibersegurança
 
 ## Estrutura do Repositório
 
+```bash
 ├── ambiente
 │   ├── attacker-config
 │   │   ├── attacker-suricata.txt
@@ -36,6 +37,7 @@ Repositório para dados relativos ao XXV Simpósio Brasileiro de Cibersegurança
 │       ├── threshold.config
 │       └── update.yaml
 └── README.md
+```
 
 ## Maquina host utilizada
 

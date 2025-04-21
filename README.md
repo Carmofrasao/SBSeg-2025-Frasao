@@ -2,6 +2,41 @@
 
 Repositório para dados relativos ao XXV Simpósio Brasileiro de Cibersegurança
 
+## Estrutura do Repositório
+
+├── ambiente
+│   ├── attacker-config
+│   │   ├── attacker-suricata.txt
+│   │   ├── config.sh
+│   │   ├── count.py
+│   │   ├── syn-flood.py
+│   │   └── syn-flood.sh
+│   ├── client-config
+│   │   ├── client-suricata.txt
+│   │   ├── config.sh
+│   │   ├── count.py
+│   │   ├── rtt.txt
+│   │   └── time.py
+│   ├── docker-compose.yml
+│   └── suricata-config
+│       ├── classification.config
+│       ├── count.py
+│       ├── entrypoint.sh
+│       ├── eve.json
+│       ├── iprep
+│       │   ├── categories.txt
+│       │   └── reputation.list
+│       ├── monitor.py
+│       ├── reference.config
+│       ├── rules
+│       │   ├── script.lua
+│       │   └── suricata.rules
+│       ├── suricata-server.txt
+│       ├── suricata.yaml
+│       ├── threshold.config
+│       └── update.yaml
+└── README.md
+
 ## Maquina host utilizada
 
 * CPU: AMD EPYC 7401 24-Core 2.0GHz

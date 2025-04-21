@@ -9,6 +9,7 @@ Esse artefato tem como objetivo demonstrar a viabilidade em reproduzir o o ataqu
 * [Título projeto](#cordeiro-em-pele-de-lobo-desvelando-a-negação-de-serviço-baseada-em-envenenamento-de-reputação)
 * [Estrutura do readme.md](#estrutura-do-readmemd)
   * [Estrutura do Repositório](#estrutura-do-repositório)
+  * [Definição dos diretórios](#definição-dos-diretórios)
 * [Selos Considerados](#selos-considerados)
 * [Informações básicas](#informações-básicas)
 * [Dependências](#dependências)
@@ -21,26 +22,6 @@ Esse artefato tem como objetivo demonstrar a viabilidade em reproduzir o o ataqu
 
 ### Estrutura do Repositório
 
-* ambiente/
-  * attacker-config/
-    - Arquivo de configuração do atacante;
-    - Arquivos usados para a execução do ataque;
-    - Arquivo para coletar metricas de resultado;
-    - Arquivo de resultados.
-  * client-config/
-    - Arquivo de configuração do cliente;
-    - Arquivos para coletar metricas de resultado;
-    - Arquivos de resultados.
-  * suricata-config/
-    * iprep/
-      - Arquivos para a configuração de reputação do Suricata. 
-    * rules/
-      - Arquivos para a configuração de regras do Suricata.
-    - Arquivos de configuração do Suricata; 
-    - Arquivos para coletar metricas de resultado;
-    - Arquivos de resultados.
-  * docker-compose.yml
-    - Arquivo de configuração do ambiente.
 
 ```bash
 ├── ambiente
@@ -76,6 +57,29 @@ Esse artefato tem como objetivo demonstrar a viabilidade em reproduzir o o ataqu
 │       └── update.yaml
 └── README.md
 ```
+
+### Definição dos diretórios
+
+* [ambiente/](https://github.com/Carmofrasao/SBSeg-2025-Frasao/tree/main/ambiente)
+  * [attacker-config/](https://github.com/Carmofrasao/SBSeg-2025-Frasao/tree/main/ambiente/attacker-config)
+    - Arquivo de configuração do atacante;
+    - Arquivos usados para a execução do ataque;
+    - Arquivo para coletar metricas de resultado;
+    - Arquivo de resultados.
+  * [client-config/](https://github.com/Carmofrasao/SBSeg-2025-Frasao/tree/main/ambiente/client-config)
+    - Arquivo de configuração do cliente;
+    - Arquivos para coletar metricas de resultado;
+    - Arquivos de resultados.
+  * [suricata-config/](https://github.com/Carmofrasao/SBSeg-2025-Frasao/tree/main/ambiente/suricata-config)
+    - Arquivos de configuração do Suricata; 
+    - Arquivos para coletar metricas de resultado;
+    - Arquivos de resultados.
+    * [iprep/](https://github.com/Carmofrasao/SBSeg-2025-Frasao/tree/main/ambiente/suricata-config/iprep)
+      - Arquivos para a configuração de reputação do Suricata. 
+    * [rules/](https://github.com/Carmofrasao/SBSeg-2025-Frasao/tree/main/ambiente/suricata-config/rules)
+      - Arquivos para a configuração de regras do Suricata.
+  * [docker-compose.yml](https://github.com/Carmofrasao/SBSeg-2025-Frasao/blob/main/ambiente/docker-compose.yml)
+    - Arquivo de configuração do ambiente.
 
 ## Maquina host utilizada
 

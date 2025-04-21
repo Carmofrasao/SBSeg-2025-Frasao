@@ -13,12 +13,11 @@ Esse artefato tem como objetivo demonstrar a viabilidade em reproduzir o o ataqu
 * [Selos Considerados](#selos-considerados)
 * [Informações básicas](#informações-básicas)
 * [Dependências](#dependências)
-* [Preocupações com segurança](#preocupações-com-segurança)
 * [Instalação](#instalação)
 * [Teste mínimo](#teste-mínimo)
 * [Experimentos](#experimentos)
   * [Reivindicação #1](#reivindicações-#1)
-* [LICENSE](#licence)
+* [LICENSE](#license)
 
 ### Estrutura do Repositório
 
@@ -80,6 +79,10 @@ Esse artefato tem como objetivo demonstrar a viabilidade em reproduzir o o ataqu
       - Arquivos para a configuração de regras do Suricata.
   * [docker-compose.yml](https://github.com/Carmofrasao/SBSeg-2025-Frasao/blob/main/ambiente/docker-compose.yml)
     - Arquivo de configuração do ambiente.
+
+## Selos Considerados
+
+Selo D + Selo F + Selo S + Selo R
 
 ## Maquina host utilizada
 

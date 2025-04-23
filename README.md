@@ -163,7 +163,8 @@ Execute os seguintes comando:
 docker exec -it attacker bash
 cd /home
 ./config.sh
-./syn-flood.sh # Execute esse comando até aparecer a mensagem "{"message": "done", "return": "OK"}"
+./syn-flood.sh 
+# Execute esse comando até aparecer a mensagem "{"message": "done", "return": "OK"} no monitor.py (maquina do Suricata)"
 ```
 
 Após esse processo, no diretório `SBSeg-2025-Frasao/ambiente/suricata-config/iprep/`, execute o comando: 
@@ -175,8 +176,6 @@ cat reputation.list
 E verifique novamente a reputação do IP `172.20.1.3`, agora, deve ser `3,107`, indicando que ele esta na categoria 3 (GoodHosts), porém, a reputação abaixou em 20, indicando que o Suricata reconheceu um ataque ao sistema, mesmo ele sendo executado por outra maquina (172.20.1.4).
 
 ## Experimentos
-
-Cada reivindicações deve ser apresentada em uma subseção, com detalhes de arquivos de configurações a serem alterados, comandos a serem executados, flags a serem utilizadas, tempo esperado de execução, expectativa de recursos a serem utilizados como 1GB RAM/Disk e resultado esperado.
 
 ### Reivindicações #1
 

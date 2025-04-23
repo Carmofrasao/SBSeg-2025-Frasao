@@ -84,6 +84,26 @@ Esse artefato tem como objetivo demonstrar a viabilidade em reproduzir o o ataqu
 
 Selo D + Selo F + Selo S + Selo R
 
+## Informações básicas
+
+Esta seção deve apresentar informações básicas de todos os componentes necessários para a execução e replicação dos experimentos. 
+Descrevendo todo o ambiente de execução, com requisitos de hardware e software.
+
+## Dependências
+
+Informações relacionadas a benchmarks utilizados e dependências para a execução devem ser descritas nesta seção. 
+Busque deixar o mais claro possível, apresentando informações como versões de dependências e processos para acessar recursos de terceiros caso necessário.
+
+## Instalação
+
+O processo de baixar e instalar a aplicação deve ser descrito nesta seção. Ao final deste processo já é esperado que a aplicação/benchmark/ferramenta consiga ser executada.
+
+## Teste mínimo
+
+Esta seção deve apresentar um passo a passo para a execução de um teste mínimo.
+Um teste mínimo de execução permite que os revisores consigam observar algumas funcionalidades do artefato. 
+Este teste é útil para a identificação de problemas durante o processo de instalação.
+
 ## Maquina host utilizada
 
 * CPU: AMD EPYC 7401 24-Core 2.0GHz
@@ -101,7 +121,15 @@ Para simular um servidor web, foi utilizado uma imagem Nginx implementado em Doc
 
 Para simular as outras maquinas da rede, foi utilizado uma imagem Debian implementada em Docker (https://hub.docker.com/_/debian).
 
-## Passo a passo para reproduzir o ataque
+## Experimentos
+
+Esta seção deve descrever um passo a passo para a execução e obtenção dos resultados do artigo. Permitindo que os revisores consigam alcançar as reivindicações apresentadas no artigo.
+
+Cada reivindicações deve ser apresentada em uma subseção, com detalhes de arquivos de configurações a serem alterados, comandos a serem executados, flags a serem utilizadas, tempo esperado de execução, expectativa de recursos a serem utilizados como 1GB RAM/Disk e resultado esperado.
+
+Caso o processo para a reprodução de todos os experimento não seja possível em tempo viável. Os autores devem escolher as principais reivindicações apresentadas no artigo e apresentar o respectivo processo para reprodução.
+
+### Reivindicações #1
 
 * Todo o processo foi executado com a maquina principal (host) em modo root!
 
@@ -115,7 +143,7 @@ Aguarde todas as maquinas inicializarem.
 
 As configurações a serem executadas por esse comando estão no arquivo `SBSeg-2025-Frasao/ambiente/docker-compose.yml`
 
-### Maquina suricata
+#### Maquina suricata
 
 Execute os seguintes comando:
 
@@ -128,7 +156,7 @@ python3 monitor.py
 
 O arquivo monitor.py é utilizado para atualizar a reputação dos IPs mal intencionados que tentam atacar o servidor web.
 
-### Maquina client
+#### Maquina client
 
 Execute os seguintes comando:
 
@@ -142,7 +170,7 @@ O arquivo config.sh atualiza o sistema e baixa algumas ferramentas para o experi
 
 O `wget` é para teste de funcionamento de rede (Recomendo executar esse comando durante todo o teste, em algum momento, ele vai parar de funcionar, o ataque funcionou!).
 
-### Maquina attacker 
+#### Maquina attacker 
 
 Execute os seguintes comando:
 
@@ -166,3 +194,7 @@ wget -qO- 172.20.1.2
 `-a`: Endereço de spoof.
 
 Provalvelmente será necessario executar o `hping3` umas 40 vezes (na configuração atual do suricata.rules e monitor.py) até que o client seja bloqueado.
+
+## LICENSE
+
+Apresente a licença.

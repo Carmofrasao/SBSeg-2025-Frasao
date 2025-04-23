@@ -1,3 +1,3 @@
 #!/bin/sh
 apt update -y
-apt install -y tcpdump wget iproute2 iputils-ping python3 python3-venv
+apt install -y wget python3 python3-venv

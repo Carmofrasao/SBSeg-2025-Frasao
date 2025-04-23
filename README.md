@@ -89,59 +89,58 @@ Selo D + Selo F + Selo S + Selo R
 Esta seção deve apresentar informações básicas de todos os componentes necessários para a execução e replicação dos experimentos. 
 Descrevendo todo o ambiente de execução, com requisitos de hardware e software.
 
-## Dependências
-
-Informações relacionadas a benchmarks utilizados e dependências para a execução devem ser descritas nesta seção. 
-Busque deixar o mais claro possível, apresentando informações como versões de dependências e processos para acessar recursos de terceiros caso necessário.
-
-## Instalação
-
-O processo de baixar e instalar a aplicação deve ser descrito nesta seção. Ao final deste processo já é esperado que a aplicação/benchmark/ferramenta consiga ser executada.
-
-## Teste mínimo
-
-Esta seção deve apresentar um passo a passo para a execução de um teste mínimo.
-Um teste mínimo de execução permite que os revisores consigam observar algumas funcionalidades do artefato. 
-Este teste é útil para a identificação de problemas durante o processo de instalação.
-
-## Maquina host utilizada
+### Hardware
 
 * CPU: AMD EPYC 7401 24-Core 2.0GHz
 * RAM: 32 GB 
 * Kernel: 6.12.13
 * SO: Debian GNU/Linux 12 (bookworm)
 
-## Sistema utilizado para reproduzir o ataque
+### Software
 
-Para simular o sistema utilizado nesse estudo, foi utilizado o sistema de contêineres Docker, versão 20.10.24.
+* Docker - versão 20.10.24.
 
-O sistema de reputação utilizado foi presente no Suricata (https://github.com/OISF/suricata) implementado em Docker (https://hub.docker.com/r/jasonish/suricata/).
+## Dependências
 
-Para simular um servidor web, foi utilizado uma imagem Nginx implementado em Docker (https://hub.docker.com/_/nginx).
+Todo o sistema foi rodado em Docker, então a unica coisa necessaria para executar o arterfato é o proprio Docker.
 
-Para simular as outras maquinas da rede, foi utilizado uma imagem Debian implementada em Docker (https://hub.docker.com/_/debian).
+## Instalação
 
-## Experimentos
+### Atualização do sistema
+```
+sudo apt update && sudo apt upgrade
+```
 
-Esta seção deve descrever um passo a passo para a execução e obtenção dos resultados do artigo. Permitindo que os revisores consigam alcançar as reivindicações apresentadas no artigo.
+### Curl
+```
+sudo apt install curl
+```
 
-Cada reivindicações deve ser apresentada em uma subseção, com detalhes de arquivos de configurações a serem alterados, comandos a serem executados, flags a serem utilizadas, tempo esperado de execução, expectativa de recursos a serem utilizados como 1GB RAM/Disk e resultado esperado.
+### Script de instalação Docker (https://docs.docker.com/get-docker/)
+```
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+```
 
-Caso o processo para a reprodução de todos os experimento não seja possível em tempo viável. Os autores devem escolher as principais reivindicações apresentadas no artigo e apresentar o respectivo processo para reprodução.
-
-### Reivindicações #1
+## Teste mínimo
 
 * Todo o processo foi executado com a maquina principal (host) em modo root!
 
-No diretorio `SBSeg-2025-Frasao/ambiente1`, execute o comando:
+Antes de começar, no diretório `SBSeg-2025-Frasao/ambiente/suricata-config/iprep/`, execute o comando: 
+
+```bash
+cat reputation.list
+```
+
+E verifique a reputação do IP `172.20.1.3`, deve ser `3,127`, indicando que ele esta na categoria 3 (GoodHosts) com reputação de 127 (reputação maxima).
+
+No diretorio `SBSeg-2025-Frasao/ambiente`, execute o comando:
 
 ```bash
 docker-compose up
 ```
 
 Aguarde todas as maquinas inicializarem.
-
-As configurações a serem executadas por esse comando estão no arquivo `SBSeg-2025-Frasao/ambiente/docker-compose.yml`
 
 #### Maquina suricata
 
@@ -150,6 +149,57 @@ Execute os seguintes comando:
 ```bash
 docker exec -it suricata bash
 cd /etc/suricata
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python3 monitor.py
+```
+
+#### Maquina attacker 
+
+Execute os seguintes comando:
+
+```bash
+docker exec -it attacker bash
+cd /home
+./config.sh
+./syn-flood.sh # Execute esse comando até aparecer a mensagem "{"message": "done", "return": "OK"}"
+```
+
+Após esse processo, no diretório `SBSeg-2025-Frasao/ambiente/suricata-config/iprep/`, execute o comando: 
+
+```bash
+cat reputation.list
+```
+
+E verifique novamente a reputação do IP `172.20.1.3`, agora, deve ser `3,107`, indicando que ele esta na categoria 3 (GoodHosts), porém, a reputação abaixou em 20, indicando que o Suricata reconheceu um ataque ao sistema, mesmo ele sendo executado por outra maquina (172.20.1.4).
+
+## Experimentos
+
+Cada reivindicações deve ser apresentada em uma subseção, com detalhes de arquivos de configurações a serem alterados, comandos a serem executados, flags a serem utilizadas, tempo esperado de execução, expectativa de recursos a serem utilizados como 1GB RAM/Disk e resultado esperado.
+
+### Reivindicações #1
+
+* Todo o processo foi executado com a maquina principal (host) em modo root!
+
+No diretorio `SBSeg-2025-Frasao/ambiente`, execute o comando:
+
+```bash
+docker-compose up
+```
+
+Aguarde todas as maquinas inicializarem.
+
+#### Maquina suricata
+
+Execute os seguintes comando:
+
+```bash
+docker exec -it suricata bash
+cd /etc/suricata
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
 source venv/bin/activate
 python3 monitor.py
 ```
@@ -162,38 +212,34 @@ Execute os seguintes comando:
 
 ```bash
 docker exec -it client bash
-/home/config.sh
-wget -qO- 172.20.1.2
+cd /home
+/config.sh
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python3 time.py
+# Após o syn-flood.py finalizar a execução, pode parar o time.py
+wget -qO- 172.20.1.2 # Esse comando deve ficar travado, significa que o cliente foi bloqueado pelo Suricata
 ```
-
-O arquivo config.sh atualiza o sistema e baixa algumas ferramentas para o experimento.
-
-O `wget` é para teste de funcionamento de rede (Recomendo executar esse comando durante todo o teste, em algum momento, ele vai parar de funcionar, o ataque funcionou!).
 
 #### Maquina attacker 
 
 Execute os seguintes comando:
 
 ```bash
-docker exec -it client bash
-/home/config.sh
-wget -qO- 172.20.1.2
-/home/syn-flood.sh
+docker exec -it attacker bash
+cd /home
+./config.sh
+python3 syn-flood.py
 ```
 
-`hping3`: É uma ferramenta de rede capaz de enviar pacotes ICMP/UDP/TCP personalizados e exibir as respostas do alvo. E foi utilizada no ataque de SYN Flood.
+Para confirmar que o processo foi concluido, no diretório `SBSeg-2025-Frasao/ambiente/suricata-config/iprep/`, execute o comando: 
 
-`-c`: Numero de pacotes enviados.
+```bash
+cat reputation.list
+```
 
-`-S`: Flag utilizada no ataque (SYN).
-
-`-p`: Porta de destino.
-
-`-i`: Taxa de envio (u100 = 1000 pacotes por segundo).
-
-`-a`: Endereço de spoof.
-
-Provalvelmente será necessario executar o `hping3` umas 40 vezes (na configuração atual do suricata.rules e monitor.py) até que o client seja bloqueado.
+E verifique novamente a reputação do IP `172.20.1.3`, agora, deve ser `1,127`, indicando que ele esta na categoria 1 (BadHosts), com reputação 127 (com certeza é um BadHost), indicando que o Suricata reconheceu o cliente como um IP perigoso, mesmo ele não executando nenhum comando malicioso.
 
 ## LICENSE
 

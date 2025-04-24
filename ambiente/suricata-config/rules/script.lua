@@ -7,11 +7,21 @@ end
 -- Se retorna 1, dropa
 -- Se 0, não dropa
 function match(args)
-			if math.random() < 0.00 then
+	if math.random() < 0.00 then
     return 1
   end
   return 0
 end
+
+
+
+
+
+
+
+
+
+
 
 
 

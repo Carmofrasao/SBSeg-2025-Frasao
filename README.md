@@ -98,7 +98,7 @@ Descrevendo todo o ambiente de execução, com requisitos de hardware e software
 
 ### Software
 
-* Docker - versão 20.10.24.
+* Docker - versão 28.1.1.
 
 ## Dependências
 
@@ -139,6 +139,7 @@ sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin dock
 ## Teste mínimo
 
 * Todo o processo foi executado com a maquina principal (host) em modo root!
+* Para a execução do teste minimo, são necessario 3 terminais.
 
 Antes de começar, no diretório `SBSeg-2025-Frasao/ambiente/suricata-config/iprep/`, execute o comando: 
 
@@ -178,7 +179,7 @@ docker exec -it attacker bash
 cd /home
 ./config.sh
 ./syn-flood.sh 
-# Execute esse comando até aparecer a mensagem "{"message": "done", "return": "OK"} no monitor.py (maquina do Suricata)"
+# Execute esse comando até aparecer a mensagem "{"message": "done", "return": "OK"}" no monitor.py (maquina do Suricata)
 ```
 
 Após esse processo, no diretório `SBSeg-2025-Frasao/ambiente/suricata-config/iprep/`, execute o comando: 
@@ -194,6 +195,7 @@ E verifique novamente a reputação do IP `172.20.1.3`, agora, deve ser `3,107`,
 ### Reivindicações #1
 
 * Todo o processo foi executado com a maquina principal (host) em modo root!
+* Para a execução do Experimento, são necessario 4 terminais.
 
 No diretorio `SBSeg-2025-Frasao/ambiente`, execute o comando:
 
@@ -213,11 +215,8 @@ cd /etc/suricata
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-source venv/bin/activate
 python3 monitor.py
 ```
-
-O arquivo monitor.py é utilizado para atualizar a reputação dos IPs mal intencionados que tentam atacar o servidor web.
 
 #### Maquina client
 
@@ -226,11 +225,11 @@ Execute os seguintes comando:
 ```bash
 docker exec -it client bash
 cd /home
-/config.sh
+./config.sh
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-python3 time.py
+python3 time.py # Execute esse comando junto ao syn-flood.py
 # Após o syn-flood.py finalizar a execução, pode parar o time.py
 wget -qO- 172.20.1.2 # Esse comando deve ficar travado, significa que o cliente foi bloqueado pelo Suricata
 ```

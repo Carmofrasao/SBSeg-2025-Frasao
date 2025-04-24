@@ -45,19 +45,19 @@ Esse artefato tem como objetivo demonstrar a viabilidade em reproduzir o o ataqu
 │       ├── count.py
 │       ├── entrypoint.sh
 │       ├── eve.json
-│       ├── iprep
-│       │   ├── categories.txt
-│       │   └── reputation.list
 │       ├── monitor.py
 │       ├── reference.config
 │       ├── requirements.txt
-│       ├── rules
-│       │   ├── script.lua
-│       │   └── suricata.rules
 │       ├── suricata-server.txt
 │       ├── suricata.yaml
 │       ├── threshold.config
-│       └── update.yaml
+│       ├── update.yaml
+│       ├── iprep
+│       │   ├── categories.txt
+│       │   └── reputation.list
+│       └── rules
+│           ├── script.lua
+│           └── suricata.rules
 ├── LICENSE
 └── README.md
 ```

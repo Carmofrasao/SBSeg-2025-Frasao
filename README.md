@@ -110,16 +110,30 @@ Todo o sistema foi rodado em Docker, então a unica coisa necessaria para execut
 ```
 sudo apt update && sudo apt upgrade
 ```
-
-### Curl
+### Dependencias 
 ```
-sudo apt install curl
+sudo apt install ca-certificates curl gnupg
 ```
-
-### Script de instalação Docker (https://docs.docker.com/get-docker/)
+### Adicione a chave GPG oficial da Docker 
 ```
-curl -fsSL https://get.docker.com -o get-docker.sh
-sudo sh get-docker.sh
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+```
+### Configure o repositório da Docker
+```
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+```
+### Atualize o índice de pacotes
+```
+sudo apt update
+```
+### Instale o Docker Engine e o plugin do Docker Compose
+```
+sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
 ## Teste mínimo
@@ -137,7 +151,7 @@ E verifique a reputação do IP `172.20.1.3`, deve ser `3,127`, indicando que el
 No diretorio `SBSeg-2025-Frasao/ambiente`, execute o comando:
 
 ```bash
-docker-compose up
+docker compose up
 ```
 
 Aguarde todas as maquinas inicializarem.
@@ -184,7 +198,7 @@ E verifique novamente a reputação do IP `172.20.1.3`, agora, deve ser `3,107`,
 No diretorio `SBSeg-2025-Frasao/ambiente`, execute o comando:
 
 ```bash
-docker-compose up
+docker compose up
 ```
 
 Aguarde todas as maquinas inicializarem.

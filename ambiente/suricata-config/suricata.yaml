@@ -45,4 +45,4 @@ security:
 
 vars:
   address-groups:
-    HOME_NET: "[]"
+    HOME_NET: "[0.0.0.0]"

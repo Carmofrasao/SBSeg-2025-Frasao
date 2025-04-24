@@ -12,6 +12,8 @@ Esse artefato tem como objetivo demonstrar a viabilidade em reproduzir o o ataqu
   * [Definição dos diretórios](#definição-dos-diretórios)
 * [Selos Considerados](#selos-considerados)
 * [Informações básicas](#informações-básicas)
+  * [Hardware](#hardware)
+  * [Software](#software)
 * [Dependências](#dependências)
 * [Instalação](#instalação)
 * [Teste mínimo](#teste-mínimo)
@@ -85,9 +87,6 @@ Esse artefato tem como objetivo demonstrar a viabilidade em reproduzir o o ataqu
 Selo D + Selo F + Selo S + Selo R
 
 ## Informações básicas
-
-Esta seção deve apresentar informações básicas de todos os componentes necessários para a execução e replicação dos experimentos. 
-Descrevendo todo o ambiente de execução, com requisitos de hardware e software.
 
 ### Hardware
 

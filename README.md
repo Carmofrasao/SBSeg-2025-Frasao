@@ -255,4 +255,4 @@ E verifique novamente a reputação do IP `172.20.1.3`, agora, deve ser `1,127`,
 
 ## LICENSE
 
-Apresente a licença.
+GNU GPL v3

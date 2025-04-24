@@ -18,7 +18,7 @@ Esse artefato tem como objetivo demonstrar a viabilidade em reproduzir o o ataqu
 * [Instalação](#instalação)
 * [Teste mínimo](#teste-mínimo)
 * [Experimentos](#experimentos)
-  * [Reivindicação #1](#reivindicações-#1)
+  * [Reivindicação #1](#reivindicações-1)
 * [LICENSE](#license)
 
 ### Estrutura do Repositório

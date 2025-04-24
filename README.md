@@ -36,6 +36,7 @@ Esse artefato tem como objetivo demonstrar a viabilidade em reproduzir o o ataqu
 │   │   ├── client-suricata.txt
 │   │   ├── config.sh
 │   │   ├── count.py
+│   │   ├── requirements.txt
 │   │   ├── rtt.txt
 │   │   └── time.py
 │   ├── docker-compose.yml
@@ -49,6 +50,7 @@ Esse artefato tem como objetivo demonstrar a viabilidade em reproduzir o o ataqu
 │       │   └── reputation.list
 │       ├── monitor.py
 │       ├── reference.config
+│       ├── requirements.txt
 │       ├── rules
 │       │   ├── script.lua
 │       │   └── suricata.rules
@@ -56,6 +58,7 @@ Esse artefato tem como objetivo demonstrar a viabilidade em reproduzir o o ataqu
 │       ├── suricata.yaml
 │       ├── threshold.config
 │       └── update.yaml
+├── LICENSE
 └── README.md
 ```
 

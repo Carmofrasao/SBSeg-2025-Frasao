@@ -227,7 +227,7 @@ python3 monitor.py
 A Figura a seguir demonstra a execução do ataque de negação de serviço baseado em envenenamento. Ao final, o servidor para de receber os pacotes que o cliente esta mandando, demonstrando a eficacia do ataque!
 
 ![Evolução do volume de pacotes gerados na rede.](./imagens/variacao_de_pacotes.pdf)
-<img src="./imagens/variacao_de_pacotes.pdf" alt="Evolução do volume de pacotes gerados na rede." width="200">
+<img src="./imagens/variacao_de_pacotes.pdf" alt="Evolução do volume de pacotes gerados na rede.">
 
 #### Maquina client
 

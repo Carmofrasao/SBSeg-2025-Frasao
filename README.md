@@ -226,7 +226,7 @@ python3 monitor.py
 
 A Figura a seguir demonstra a execução do ataque de negação de serviço baseado em envenenamento. Ao final, o servidor para de receber os pacotes que o cliente esta mandando, demonstrando a eficacia do ataque!
 
-![Evolução do volume de pacotes gerados na rede.](https://github.com/Carmofrasao/SBSeg-2025-Frasao/blob/main/imagens/variacao_de_pacotes.pdf)
+![Evolução do volume de pacotes gerados na rede.](https://github.com/Carmofrasao/SBSeg-2025-Frasao/blob/main/imagens/variacao_de_pacotes.jpg)
 
 #### Maquina client
 
@@ -246,7 +246,7 @@ wget -qO- 172.20.1.2 # Esse comando deve ficar travado, significa que o cliente 
 
 O gráfico de tempo de resposta às requisições legítimas, presente na Figura a seguir apresenta um padrão de aumento contínuo, refletindo a degradação gradual no desempenho da comunicação entre o cliente legítimo e o servidor. Ao final, o tempo de resposta tende ao infinito, mostrando que o cliente esta bloqueado.
 
-![Variação do tempo de resposta percebido pelo cliente legítimo ao fazer requisições para o servidor](https://github.com/Carmofrasao/SBSeg-2025-Frasao/blob/main/imagens/rtt.pdf)
+![Variação do tempo de resposta percebido pelo cliente legítimo ao fazer requisições para o servidor](https://github.com/Carmofrasao/SBSeg-2025-Frasao/blob/main/imagens/rtt.jpg)
 
 #### Maquina attacker 
 

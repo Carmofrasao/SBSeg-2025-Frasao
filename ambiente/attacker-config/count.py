@@ -20,10 +20,13 @@ def count_packets(interface="eth0", interval=10, total_duration=300):
     for i in range(num_intervals):
         start_time = f'{(time.perf_counter()-now):.2f}s'
 
+        # Limita a um número alto de pacotes
+        c = 1000000
+
         cmd = [
             "tcpdump",
             "-i", interface,        # Usa a interface especificada
-            "-c", "1000000",        # Limita a um número alto de pacotes
+            "-c", str(c),           # Limita a um número alto de pacotes
             "-w", "-",              # Não salva em arquivo
             "-q",                   # Modo quiet
             "-G", str(interval),    # Duração do intervalo

@@ -23,7 +23,6 @@ Esse artefato tem como objetivo demonstrar a viabilidade em reproduzir o o ataqu
 
 ### Estrutura do Repositório
 
-
 ```bash
 ├── ambiente
 │   ├── attacker-config
@@ -58,6 +57,9 @@ Esse artefato tem como objetivo demonstrar a viabilidade em reproduzir o o ataqu
 │       └── rules
 │           ├── script.lua
 │           └── suricata.rules
+├── imagens
+│   ├── rtt.pdf
+│   └── variacao_de_pacotes.pdf
 ├── LICENSE
 └── README.md
 ```
@@ -84,6 +86,8 @@ Esse artefato tem como objetivo demonstrar a viabilidade em reproduzir o o ataqu
       - Arquivos para a configuração de regras do Suricata.
   * [docker-compose.yml](https://github.com/Carmofrasao/SBSeg-2025-Frasao/blob/main/ambiente/docker-compose.yml)
     - Arquivo de configuração do ambiente.
+* [imagens/](https://github.com/Carmofrasao/SBSeg-2025-Frasao/tree/main/imagens)
+  - Figuras para auxiliar no entendimento do processo.
 
 ## Selos Considerados
 
@@ -220,6 +224,10 @@ pip install -r requirements.txt
 python3 monitor.py
 ```
 
+A Figura a seguir demonstra a execução do ataque de negação de serviço baseado em envenenamento. Ao final, o servidor para de receber os pacotes que o cliente esta mandando, demonstrando a eficacia do ataque!
+
+![Evolução do volume de pacotes gerados na rede.](imagens/variacao_de_pacotes.pdf)
+
 #### Maquina client
 
 Execute os seguintes comando:
@@ -235,6 +243,10 @@ python3 time.py # Execute esse comando junto ao syn-flood.py
 # Após o syn-flood.py finalizar a execução, pode parar o time.py
 wget -qO- 172.20.1.2 # Esse comando deve ficar travado, significa que o cliente foi bloqueado pelo Suricata
 ```
+
+O gráfico de tempo de resposta às requisições legítimas, presente na Figura a seguir apresenta um padrão de aumento contínuo, refletindo a degradação gradual no desempenho da comunicação entre o cliente legítimo e o servidor. Ao final, o tempo de resposta tende ao infinito, mostrando que o cliente esta bloqueado.
+
+![Variação do tempo de resposta percebido pelo cliente legítimo ao fazer requisições para o servidor](imagens/rtt.pdf)
 
 #### Maquina attacker 
 
